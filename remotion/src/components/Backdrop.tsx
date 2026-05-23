@@ -1,53 +1,78 @@
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { COLORS } from "../theme";
 
-export const Backdrop: React.FC<{ tint?: string }> = ({ tint }) => {
+type Props = {
+  tint?: string;
+};
+
+export const Backdrop: React.FC<Props> = ({ tint }) => {
   const frame = useCurrentFrame();
-  const drift = Math.sin(frame / 90) * 30;
+  const drift = Math.sin(frame / 140) * 14;
 
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.bg, overflow: "hidden" }}>
+      {/* Warm radial glow drifting */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background: `radial-gradient(1200px 800px at ${50 + drift / 6}% 30%, ${
-            tint ?? "rgba(245, 194, 107, 0.10)"
+          background: `radial-gradient(1400px 1000px at ${50 + drift}% 35%, ${
+            COLORS.bgWarm
+          }, transparent 65%)`,
+        }}
+      />
+      {/* Subtle directional warm light */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: `radial-gradient(900px 900px at 80% 110%, ${
+            COLORS.bgDeep
           }, transparent 60%)`,
+          opacity: 0.6,
         }}
       />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(900px 600px at 20% 90%, rgba(74, 143, 231, 0.06), transparent 60%)",
-        }}
-      />
-      <Grid />
+      {tint ? (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: `radial-gradient(800px 600px at 50% 50%, ${tint}, transparent 70%)`,
+          }}
+        />
+      ) : null}
+      <PaperGrain />
       <Vignette />
     </AbsoluteFill>
   );
 };
 
-const Grid: React.FC = () => {
+// SVG-based subtle paper grain (cheap, no external assets).
+const PaperGrain: React.FC = () => {
   return (
     <svg
       width="100%"
       height="100%"
-      style={{ position: "absolute", inset: 0, opacity: 0.08 }}
+      style={{ position: "absolute", inset: 0, opacity: 0.18, mixBlendMode: "multiply" }}
     >
       <defs>
-        <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path
-            d="M 80 0 L 0 0 0 80"
-            fill="none"
-            stroke={COLORS.ink}
-            strokeWidth="1"
+        <filter id="grain">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.9"
+            numOctaves="2"
+            seed="7"
           />
-        </pattern>
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.4
+                    0 0 0 0 0.32
+                    0 0 0 0 0.2
+                    0 0 0 0.35 0"
+          />
+        </filter>
       </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
+      <rect width="100%" height="100%" filter="url(#grain)" />
     </svg>
   );
 };
@@ -58,7 +83,7 @@ const Vignette: React.FC = () => (
       position: "absolute",
       inset: 0,
       background:
-        "radial-gradient(1400px 900px at 50% 50%, transparent 55%, rgba(0,0,0,0.45) 100%)",
+        "radial-gradient(1600px 1000px at 50% 50%, transparent 60%, rgba(72, 56, 32, 0.18) 100%)",
       pointerEvents: "none",
     }}
   />

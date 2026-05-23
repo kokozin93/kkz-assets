@@ -2,19 +2,31 @@ export const FPS = 30;
 export const WIDTH = 1920;
 export const HEIGHT = 1080;
 
+// Brand-aligned palette (SAGE by Brandcore).
+// Cream paper backdrop. Black hex mark. Warm gold supertitle.
+// Sage / slate / mauve layer accents.
 export const COLORS = {
-  bg: "#0E1116",
-  bgWarm: "#141821",
-  ink: "#F4F0E8",
-  inkDim: "rgba(244, 240, 232, 0.55)",
-  inkFaint: "rgba(244, 240, 232, 0.18)",
-  gold: "#F5C26B",
-  seo: "#3FB67A",
-  aeo: "#4A8FE7",
-  geo: "#9B7AE6",
-  card: "#1B2030",
-  cardEdge: "rgba(244, 240, 232, 0.10)",
+  bg: "#EFE4CF",
+  bgWarm: "#F4EBDA",
+  bgDeep: "#E5D8BF",
+  ink: "#1A1A1A",
+  inkSoft: "#2F2A22",
+  inkDim: "rgba(26, 26, 26, 0.55)",
+  inkFaint: "rgba(26, 26, 26, 0.18)",
+  inkGhost: "rgba(26, 26, 26, 0.08)",
+  gold: "#C9A876",
+  goldDeep: "#A88A5C",
+  seo: "#A8B89E",
+  aeo: "#9BB1C8",
+  geo: "#BCA9C8",
+  card: "#F7EFDC",
+  cardLight: "#FBF5E6",
+  cardEdge: "rgba(26, 26, 26, 0.10)",
+  hexBlack: "#1A1A1A",
 } as const;
+
+export const FONT_DISPLAY = `"Inter Tight", "Inter", system-ui, sans-serif`;
+export const FONT_BODY = `"Inter", system-ui, sans-serif`;
 
 export const DUR = {
   scene04: 5 * FPS,
