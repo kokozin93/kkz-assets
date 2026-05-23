@@ -1,0 +1,22 @@
+{
+  "name": "sage-storyboard",
+  "version": "1.0.0",
+  "description": "Remotion animation for SAGE storyboard — Scene 04 onward",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render Main out/sage-scene04-onward.mp4",
+    "build:scene4": "remotion render Scene04 out/scene04.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.379",
+    "@remotion/google-fonts": "4.0.379",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.379"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3"
+  }
+}
