@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://127.0.0.1:8765/brands/knife/
 Subject: Knife Cooking Oil
-Date: Tue, 6 Oct 2026 11:03:28 +0000
+Date: Tue, 6 Oct 2026 15:45:12 +0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--nd0gBC3JrLZ0joizGccvT0gxYtzesv3UYv5sA57WKD----"
+	boundary="----MultipartBoundary--xYss13yGOlsCOKy8VDqyKJ1Ao7J48zFoFMLTjQjRbp----"
 
 
-------MultipartBoundary--nd0gBC3JrLZ0joizGccvT0gxYtzesv3UYv5sA57WKD----
+------MultipartBoundary--xYss13yGOlsCOKy8VDqyKJ1Ao7J48zFoFMLTjQjRbp----
 Content-Type: text/html
-Content-ID: <frame-9D3C159477208CB0B731F4E6375CD065@mhtml.blink>
+Content-ID: <frame-EF0B4F7B59F05AF50C2F8FA3C45CFDD4@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/brands/knife/
 
@@ -23,7 +23,7 @@ ain><h1>Knife</h1><img src=3D"http://127.0.0.1:8765/img/knife-oil.jpg" alt=
 =3D"Knife cooking oil 2kg"><p>Pure cooking oil.</p></main><footer>Footer</f=
 ooter>
 </body></html>
-------MultipartBoundary--nd0gBC3JrLZ0joizGccvT0gxYtzesv3UYv5sA57WKD----
+------MultipartBoundary--xYss13yGOlsCOKy8VDqyKJ1Ao7J48zFoFMLTjQjRbp----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/knife-oil.jpg
@@ -116,7 +116,7 @@ iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
 KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
 AKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==
 
-------MultipartBoundary--nd0gBC3JrLZ0joizGccvT0gxYtzesv3UYv5sA57WKD----
+------MultipartBoundary--xYss13yGOlsCOKy8VDqyKJ1Ao7J48zFoFMLTjQjRbp----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/css/style.css
@@ -146,4 +146,4 @@ footer { background: rgb(34, 34, 34); color: rgb(204, 204, 204); padding: 2=
 .tab { display: none; }
 
 .tab.active { display: block; }
-------MultipartBoundary--nd0gBC3JrLZ0joizGccvT0gxYtzesv3UYv5sA57WKD------
+------MultipartBoundary--xYss13yGOlsCOKy8VDqyKJ1Ao7J48zFoFMLTjQjRbp------

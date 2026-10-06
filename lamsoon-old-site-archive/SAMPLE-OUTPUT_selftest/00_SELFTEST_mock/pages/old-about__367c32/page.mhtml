@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://127.0.0.1:8765/about.aspx
 Subject: About Us
-Date: Tue, 6 Oct 2026 11:03:23 +0000
+Date: Tue, 6 Oct 2026 15:45:07 +0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--8Yo1Ht2dhUPWP012VMOanmOdCWefuqdgFuVDi09xcH----"
+	boundary="----MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----"
 
 
-------MultipartBoundary--8Yo1Ht2dhUPWP012VMOanmOdCWefuqdgFuVDi09xcH----
+------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
 Content-Type: text/html
-Content-ID: <frame-146AAC6D97F268590039905D73088ED6@mhtml.blink>
+Content-ID: <frame-F30693B680375014113C3FBA982686B3@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/about.aspx
 
@@ -24,8 +24,9 @@ y photo" width=3D"600"></main>
 <form id=3D"aspnetForm" method=3D"post" action=3D"http://127.0.0.1:8765/abo=
 ut.aspx"></form>
 <footer>Footer</footer>
+
 </body></html>
-------MultipartBoundary--8Yo1Ht2dhUPWP012VMOanmOdCWefuqdgFuVDi09xcH----
+------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/hero2.jpg
@@ -259,7 +260,7 @@ ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
 iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
 KACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==
 
-------MultipartBoundary--8Yo1Ht2dhUPWP012VMOanmOdCWefuqdgFuVDi09xcH----
+------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/css/style.css
@@ -289,4 +290,4 @@ footer { background: rgb(34, 34, 34); color: rgb(204, 204, 204); padding: 2=
 .tab { display: none; }
 
 .tab.active { display: block; }
-------MultipartBoundary--8Yo1Ht2dhUPWP012VMOanmOdCWefuqdgFuVDi09xcH------
+------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b------

@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/contact.aspx
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 1  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T11:03:27+00:00
+- **Captured:** 2026-10-06T15:44:42+00:00
 - **Words (main):** 6  ·  **Images:** 0  ·  **Forms:** 1
 
 ## SEO / meta

@@ -2,8 +2,8 @@
 
 - **Live URL:** http://127.0.0.1:8765/
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 0  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T11:03:21+00:00
-- **Words (main):** 44  ·  **Images:** 6  ·  **Forms:** 0
+- **Captured:** 2026-10-06T15:44:28+00:00
+- **Words (main):** 52  ·  **Images:** 6  ·  **Forms:** 0
 
 ## SEO / meta
 
@@ -47,6 +47,12 @@ Annual report (PDF) · Broken link · Facebook · Email us
 
 Background section
 
+_[hidden]_ Mock mourning notice
+
+##### _[hidden]_ Annual Report 2569
+
+_[hidden]_ Download report  ↗ <http://127.0.0.1:8765/docs/annual.pdf>
+
 ## Images on this page
 
 | # | Local file | Category | Alt text | Rendered | Natural | Visible | Original URL |
@@ -76,6 +82,7 @@ Icon-font glyphs used (not image files — need replacement icons): `fa fa-check
 | main | Facebook | https://www.facebook.com/lamsoon |
 | main | Email us | mailto:info@lamsoon.com.my |
 | footer | +603 5123 4567 | tel:+60351234567 |
+| main | Download report | http://127.0.0.1:8765/docs/annual.pdf |
 
 ## Global copy (header / nav / footer)
 

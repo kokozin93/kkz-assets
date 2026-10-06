@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://127.0.0.1:8765/
 Subject: Lam Soon Malaysia | Home
-Date: Tue, 6 Oct 2026 11:03:23 +0000
+Date: Tue, 6 Oct 2026 15:45:04 +0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----"
+	boundary="----MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----"
 
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: text/html
-Content-ID: <frame-BED464FCDF1E65B04DAA6E75CEE3DCAF@mhtml.blink>
+Content-ID: <frame-4C6BF4AF6A8B5D5C42E5127927767359@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/
 
@@ -21,7 +21,7 @@ ntent=3D"text/html; charset=3DUTF-8"><title>Lam Soon Malaysia | Home</title=
 operty=3D"og:image" content=3D"/img/hero1.jpg">
 <link rel=3D"icon" href=3D"http://127.0.0.1:8765/img/logo.png"><link rel=3D=
 "stylesheet" href=3D"http://127.0.0.1:8765/css/style.css">
-</head><body>
+</head><body style=3D"overflow-x: hidden; overflow-y: auto !important;">
 <header class=3D"site-header"><img src=3D"http://127.0.0.1:8765/img/logo.pn=
 g" alt=3D"Lam Soon logo"><nav><a href=3D"http://127.0.0.1:8765/">Home</a> <=
 a href=3D"http://127.0.0.1:8765/about.aspx">About Us</a> <a href=3D"http://=
@@ -53,9 +53,28 @@ k</a> =C2=B7 <a href=3D"https://www.facebook.com/lamsoon">Facebook</a> =C2=
 <div class=3D"section-bg"><h3>Community</h3><p>Background section</p></div>
 </main><footer><p>=C2=A9 Lam Soon (M) Berhad. Tel: <a href=3D"tel:+60351234=
 567">+603 5123 4567</a></p></footer>
+<!-- mock announcement popup: image only, no text button (like the TH mourn=
+ing notice) -->
 
-</body></html>
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+<!-- mock second popup (investor report): separate backdrop + modal box, ap=
+pears after the first -->
+
+
+<div id=3D"announce" class=3D"notice-wrap" data-lsa-overlay=3D"2" style=3D"=
+position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.85); z-index: 9999=
+9; display: none !important; align-items: center; justify-content: center; =
+visibility: hidden;"><div style=3D"background:#222;border:6px solid #fff;pa=
+dding:30px;color:#fff;font-size:22px">Mock mourning notice<br><img src=3D"h=
+ttp://127.0.0.1:8765/img/logo.png" width=3D"80"></div></div><div class=3D"m=
+odal-backdrop" data-lsa-overlay=3D"2" style=3D"position: fixed; inset: 0px;=
+ background: rgba(0, 0, 0, 0.5); z-index: 100000; display: none !important;=
+"></div><div class=3D"modal investor-popup" data-lsa-overlay=3D"2" style=3D=
+"position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); wi=
+dth: 520px; height: 340px; background: rgb(255, 255, 255); z-index: 100001;=
+ padding: 20px; display: none !important;"><h3>Annual Report 2569</h3><a hr=
+ef=3D"http://127.0.0.1:8765/docs/annual.pdf">Download report</a></div></bod=
+y></html>
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/lazy-product.jpg
@@ -178,7 +197,7 @@ oAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiig
 AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
 iiigAooooA//2Q==
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/hero1.jpg
@@ -403,7 +422,7 @@ UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
 RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
 FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/2Q==
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/logo.png
@@ -427,7 +446,7 @@ irKuRevVY8f+8P9WXpVW/3V4ZJRCoUc79g17HhqSZjqaauVAQNDr+46cGGi+RkQRhyqp7bocCAox
 AmEBC4QFLBAWsEBYwAJhAQuEBSwQFrBAWMACYQELhAUsEBawQFjAAmEBC4QFLBAWsEBYwAJhAQuE
 BSwQFrBAWMACYQELhAUsEBawQFjAAmEBi78AP89DBLeIpwcAAAAASUVORK5CYII=
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/tick.png
@@ -435,7 +454,7 @@ Content-Location: http://127.0.0.1:8765/img/tick.png
 iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGUlEQVR4nGMUbLJmIAUwkaR6VMOo
 hiGlAQCpSADurst8RwAAAABJRU5ErkJggg==
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/bg-section.jpg
@@ -615,7 +634,7 @@ CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
 KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
 ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//2Q==
 
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy----
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/css/style.css
@@ -645,4 +664,4 @@ footer { background: rgb(34, 34, 34); color: rgb(204, 204, 204); padding: 2=
 .tab { display: none; }
 
 .tab.active { display: block; }
-------MultipartBoundary--uyQPVS4BlvQu2OHt7d9QkVDGla47X2BpJkFS2GpRXy------
+------MultipartBoundary--injkwx7MkVWAMUJJ30AfVk8ZFPdkpoHODhNA77F4Lv------

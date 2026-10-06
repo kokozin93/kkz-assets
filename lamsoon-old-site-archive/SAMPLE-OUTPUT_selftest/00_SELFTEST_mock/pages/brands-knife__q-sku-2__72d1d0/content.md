@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/brands/knife/?sku=2
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 2  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T11:03:32+00:00
+- **Captured:** 2026-10-06T15:44:47+00:00
 - **Words (main):** 4  ·  **Images:** 1  ·  **Forms:** 0
 
 ## SEO / meta

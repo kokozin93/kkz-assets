@@ -22,8 +22,8 @@
   "notes": "self-test",
   "key": "mock"
  },
- "started": "2026-10-06T11:03:20+00:00",
- "finished": "2026-10-06T11:03:36+00:00",
+ "started": "2026-10-06T15:45:00+00:00",
+ "finished": "2026-10-06T15:45:23+00:00",
  "platform_hints": [
   "ASP.NET",
   "Google Tag Manager",
@@ -35,7 +35,7 @@
   "errors": 1,
   "assets": 8,
   "assets_failed": 0,
-  "documents": 1,
+  "documents": 2,
   "forms": 3,
   "issues": 4,
   "out_of_scope": 0,
@@ -54,7 +54,7 @@
     "link"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T11:03:21+00:00",
+   "captured_at": "2026-10-06T15:44:28+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/",
    "redirected": false,
@@ -62,18 +62,51 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [
+    {
+     "tag": "div",
+     "id": "announce",
+     "cls": "announce notice-wrap",
+     "z": 99999,
+     "cover": 100,
+     "text": "Mock mourning notice",
+     "images": [
+      "http://127.0.0.1:8765/img/logo.png"
+     ],
+     "shot": "screenshot_popup.jpg"
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "modal-backdrop",
+     "z": 100000,
+     "cover": 100,
+     "text": "",
+     "images": []
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "modal investor-popup",
+     "z": 100001,
+     "cover": 16,
+     "text": "Annual Report 2569\nDownload report",
+     "images": [],
+     "shot": "screenshot_popup_2.jpg"
+    }
+   ],
    "title": "Lam Soon Malaysia | Home",
    "h1": [
     "Nourishing Malaysian families"
    ],
    "lang": "en",
-   "words": 44,
-   "blocks": 14,
-   "hidden_blocks": 2,
+   "words": 52,
+   "blocks": 17,
+   "hidden_blocks": 5,
    "images": 6,
    "svgs": 1,
    "icon_fonts": 1,
-   "links": 10,
+   "links": 11,
    "forms": 0,
    "media": 0,
    "emails": [
@@ -81,7 +114,8 @@
    ],
    "page_h": 2059,
    "orphan": false,
-   "id": "P001"
+   "id": "P001",
+   "reshot_at": "2026-10-06T15:45:08+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/about.aspx",
@@ -93,7 +127,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T11:03:27+00:00",
+   "captured_at": "2026-10-06T15:44:35+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/about.aspx",
    "redirected": false,
@@ -101,6 +135,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "About Us",
    "h1": [
     "About Lam Soon"
@@ -118,7 +153,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P002"
+   "id": "P002",
+   "reshot_at": "2026-10-06T15:45:14+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/brands/knife/",
@@ -130,7 +166,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T11:03:27+00:00",
+   "captured_at": "2026-10-06T15:44:38+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/brands/knife/",
    "redirected": false,
@@ -138,6 +174,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "Knife Cooking Oil",
    "h1": [
     "Knife"
@@ -155,7 +192,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P003"
+   "id": "P003",
+   "reshot_at": "2026-10-06T15:45:15+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/contact.aspx",
@@ -167,7 +205,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T11:03:27+00:00",
+   "captured_at": "2026-10-06T15:44:42+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/contact.aspx",
    "redirected": false,
@@ -175,6 +213,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "Contact Us",
    "h1": [
     "Contact Us"
@@ -194,7 +233,8 @@
    ],
    "page_h": 900,
    "orphan": false,
-   "id": "P004"
+   "id": "P004",
+   "reshot_at": "2026-10-06T15:45:18+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/missing-page.aspx",
@@ -206,7 +246,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T11:03:31+00:00",
+   "captured_at": "2026-10-06T15:44:46+00:00",
    "status": 404,
    "final_url": "http://127.0.0.1:8765/missing-page.aspx",
    "redirected": false,
@@ -214,6 +254,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "Error response",
    "h1": [
     "Error response"
@@ -231,7 +272,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P005"
+   "id": "P005",
+   "reshot_at": "2026-10-06T15:45:22+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
@@ -243,7 +285,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T11:03:31+00:00",
+   "captured_at": "2026-10-06T15:44:43+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
    "redirected": false,
@@ -251,6 +293,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "สินค้า | ล่ำสูง",
    "h1": [
     "สินค้าของเรา"
@@ -268,7 +311,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P006"
+   "id": "P006",
+   "reshot_at": "2026-10-06T15:45:19+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/brands/knife/?sku=2",
@@ -280,7 +324,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/brands/knife/",
-   "captured_at": "2026-10-06T11:03:32+00:00",
+   "captured_at": "2026-10-06T15:44:47+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/brands/knife/?sku=2",
    "redirected": false,
@@ -288,6 +332,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "Knife Cooking Oil",
    "h1": [
     "Knife"
@@ -305,7 +350,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P007"
+   "id": "P007",
+   "reshot_at": "2026-10-06T15:45:23+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/old-about",
@@ -317,7 +363,7 @@
     "sitemap"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T11:03:21+00:00",
+   "captured_at": "2026-10-06T15:44:32+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/about.aspx",
    "redirected": true,
@@ -325,6 +371,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "About Us",
    "h1": [
     "About Lam Soon"
@@ -342,7 +389,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": true,
-   "id": "P008"
+   "id": "P008",
+   "reshot_at": "2026-10-06T15:45:11+00:00"
   },
   {
    "url": "http://127.0.0.1:8765/orphan.aspx",
@@ -354,7 +402,7 @@
     "sitemap"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T11:03:21+00:00",
+   "captured_at": "2026-10-06T15:44:28+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/orphan.aspx",
    "redirected": false,
@@ -362,6 +410,7 @@
    "server": "SimpleHTTP/0.6 Python/3.13.16",
    "x_powered_by": "",
    "x_frame_options": "",
+   "overlays_hidden": [],
    "title": "Orphan Campaign",
    "h1": [
     "Old campaign page"
@@ -379,7 +428,8 @@
    "emails": [],
    "page_h": 900,
    "orphan": true,
-   "id": "P009"
+   "id": "P009",
+   "reshot_at": "2026-10-06T15:45:05+00:00"
   }
  ]
 }

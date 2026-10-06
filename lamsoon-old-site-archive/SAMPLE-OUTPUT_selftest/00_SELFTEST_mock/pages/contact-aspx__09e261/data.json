@@ -206,7 +206,7 @@
    "link"
   ],
   "parent": "http://127.0.0.1:8765/",
-  "captured_at": "2026-10-06T11:03:27+00:00",
+  "captured_at": "2026-10-06T15:44:42+00:00",
   "status": 200,
   "final_url": "http://127.0.0.1:8765/contact.aspx",
   "redirected": false,
@@ -214,6 +214,7 @@
   "server": "SimpleHTTP/0.6 Python/3.13.16",
   "x_powered_by": "",
   "x_frame_options": "",
+  "overlays_hidden": [],
   "title": "Contact Us",
   "h1": [
    "Contact Us"
@@ -233,6 +234,7 @@
   ],
   "page_h": 900,
   "orphan": false,
-  "id": "P004"
+  "id": "P004",
+  "reshot_at": "2026-10-06T15:45:18+00:00"
  }
 }

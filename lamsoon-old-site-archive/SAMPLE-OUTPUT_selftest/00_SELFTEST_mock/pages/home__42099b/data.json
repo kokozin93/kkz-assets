@@ -141,6 +141,33 @@
    "path": "html > body > footer > p",
    "link": "tel:+60351234567",
    "text": "© Lam Soon (M) Berhad. Tel: +603 5123 4567"
+  },
+  {
+   "tag": "div",
+   "heading": null,
+   "region": "main",
+   "visible": false,
+   "path": "div#announce > div",
+   "link": null,
+   "text": "Mock mourning notice"
+  },
+  {
+   "tag": "h3",
+   "heading": "h3",
+   "region": "main",
+   "visible": false,
+   "path": "html > body > div.modal.investor-popup > h3",
+   "link": null,
+   "text": "Annual Report 2569"
+  },
+  {
+   "tag": "div",
+   "heading": null,
+   "region": "main",
+   "visible": false,
+   "path": "html > body > div.modal.investor-popup",
+   "link": "http://127.0.0.1:8765/docs/annual.pdf",
+   "text": "Download report"
   }
  ],
  "images": [
@@ -177,6 +204,21 @@
    "local": "assets/images/002_lazy-product.jpg",
    "category": "images",
    "bytes": 6622
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "kind": "img",
+   "alt": null,
+   "title": null,
+   "natural_w": 200,
+   "natural_h": 60,
+   "rendered_w": 0,
+   "rendered_h": 0,
+   "visible": false,
+   "region": "main",
+   "path": "div#announce > div > img",
+   "link": null,
+   "local": "assets/logos/001_logo.png"
   },
   {
    "kind": "css-bg",
@@ -391,6 +433,17 @@
    "region": "footer",
    "visible": true,
    "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/docs/annual.pdf",
+   "raw": "docs/annual.pdf",
+   "text": "Download report",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": false,
+   "onclick": null
   }
  ],
  "onclickNav": [],
@@ -464,6 +517,12 @@
    "type": "other",
    "status": 200,
    "ctype": "image/png"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/png"
   }
  ],
  "summary": {
@@ -478,7 +537,7 @@
    "link"
   ],
   "parent": null,
-  "captured_at": "2026-10-06T11:03:21+00:00",
+  "captured_at": "2026-10-06T15:44:28+00:00",
   "status": 200,
   "final_url": "http://127.0.0.1:8765/",
   "redirected": false,
@@ -486,18 +545,51 @@
   "server": "SimpleHTTP/0.6 Python/3.13.16",
   "x_powered_by": "",
   "x_frame_options": "",
+  "overlays_hidden": [
+   {
+    "tag": "div",
+    "id": "announce",
+    "cls": "announce notice-wrap",
+    "z": 99999,
+    "cover": 100,
+    "text": "Mock mourning notice",
+    "images": [
+     "http://127.0.0.1:8765/img/logo.png"
+    ],
+    "shot": "screenshot_popup.jpg"
+   },
+   {
+    "tag": "div",
+    "id": "",
+    "cls": "modal-backdrop",
+    "z": 100000,
+    "cover": 100,
+    "text": "",
+    "images": []
+   },
+   {
+    "tag": "div",
+    "id": "",
+    "cls": "modal investor-popup",
+    "z": 100001,
+    "cover": 16,
+    "text": "Annual Report 2569\nDownload report",
+    "images": [],
+    "shot": "screenshot_popup_2.jpg"
+   }
+  ],
   "title": "Lam Soon Malaysia | Home",
   "h1": [
    "Nourishing Malaysian families"
   ],
   "lang": "en",
-  "words": 44,
-  "blocks": 14,
-  "hidden_blocks": 2,
+  "words": 52,
+  "blocks": 17,
+  "hidden_blocks": 5,
   "images": 6,
   "svgs": 1,
   "icon_fonts": 1,
-  "links": 10,
+  "links": 11,
   "forms": 0,
   "media": 0,
   "emails": [
@@ -505,6 +597,7 @@
   ],
   "page_h": 2059,
   "orphan": false,
-  "id": "P001"
+  "id": "P001",
+  "reshot_at": "2026-10-06T15:45:08+00:00"
  }
 }

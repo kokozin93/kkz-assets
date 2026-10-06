@@ -63,6 +63,65 @@ POPUP_TEXT = re.compile(r"^(accept( all)?( cookies)?|i accept|agree|i agree|allo
                         r"ยอมรับ(ทั้งหมด)?|ตกลง|ยินยอม|ปิด|อนุญาต(ทั้งหมด)?)$", re.I)
 
 
+# Popups with no text button (e.g. the TH royal-mourning notice): click an icon close button if one exists,
+# otherwise mark full-screen fixed layers so they can be photographed once, then hidden for the page screenshots.
+CLOSE_JS = r"""() => {
+  const SEL = '[aria-label*="close" i],[aria-label*="ปิด"],[title*="close" i],[title*="ปิด"],.close,.btn-close,.modal-close,' +
+    '.popup-close,.close-popup,.close-button,.closeBtn,.dialog-close-button,.pum-close,.mfp-close,.fancybox-close,' +
+    '.fancybox-button--close,.fancybox-close-small,.lity-close,.featherlight-close,.sgpb-popup-close-button-1,.eicon-close';
+  const fixedAnc = (e) => { for (let n = e; n && n !== document.body; n = n.parentElement) {
+    if (getComputedStyle(n).position === 'fixed') return true; } return false; };
+  const cands = [...document.querySelectorAll(SEL)];
+  for (const e of document.querySelectorAll('button,a,span,div,i')) {
+    const t = (e.textContent || '').trim();
+    if (e.children.length === 0 && /^[×✕✖xX]$/.test(t)) cands.push(e);
+  }
+  let n = 0;
+  for (const e of cands) {
+    const r = e.getBoundingClientRect();
+    if (!r.width || !r.height || !fixedAnc(e)) continue;
+    const a = e.closest('a[href]');
+    if (a && !/^(#|javascript:)/i.test(a.getAttribute('href') || '')) continue;
+    try { e.click(); n++; } catch (_) {}
+  }
+  return n;
+}"""
+OVERLAY_MARK_JS = r"""() => {
+  const vw = innerWidth, vh = innerHeight, area = vw * vh;
+  const bodyLen = (document.body.innerText || '').length || 1;
+  const KW = /modal|popup|pop-up|overlay|lightbox|dialog|announce|mourn|notice|splash|fancybox|mfp|pum-|colorbox|featherlight|lity|sgpb|swal|backdrop/i;
+  const out = [];
+  for (const el of document.querySelectorAll('body *')) {
+    if (el.closest('[data-lsa-overlay]') || el.closest('header,nav')) continue;
+    const cs = getComputedStyle(el);
+    const z = parseInt(cs.zIndex) || 0;
+    if (!(cs.position === 'fixed' || (cs.position === 'absolute' && z >= 1000))) continue;
+    if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) < 0.05) continue;
+    const r = el.getBoundingClientRect();
+    const cover = Math.max(0, Math.min(r.right, vw) - Math.max(r.left, 0)) * Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0)) / area;
+    const sig = `${el.id} ${typeof el.className === 'string' ? el.className : ''} ${el.getAttribute('role') || ''} ${el.getAttribute('aria-modal') === 'true' ? 'modal' : ''}`;
+    const kw = KW.test(sig) || el.tagName === 'DIALOG';
+    if ((el.innerText || '').length / bodyLen > 0.5 || el.querySelector('main,article,#content,.site-content,#page')) continue;
+    if (!((cover >= 0.35 && (kw || z >= 50)) || (kw && cs.position === 'fixed' && cover >= 0.1))) continue;
+    el.setAttribute('data-lsa-overlay', '1');
+    out.push({tag: el.tagName.toLowerCase(), id: el.id, cls: sig.trim().slice(0, 160), z, cover: Math.round(cover * 100),
+              text: (el.innerText || '').trim().slice(0, 300),
+              images: [...el.querySelectorAll('img')].map((i) => i.currentSrc || i.src).filter(Boolean).slice(0, 5)});
+  }
+  return out;
+}"""
+OVERLAY_HIDE_JS = r"""() => {
+  document.querySelectorAll('[data-lsa-overlay]').forEach((e) => { e.style.setProperty('display', 'none', 'important'); e.setAttribute('data-lsa-overlay', '2'); });
+  for (const e of [document.documentElement, document.body]) {
+    const cs = getComputedStyle(e);
+    if (cs.overflowY === 'hidden' || cs.overflowY === 'clip') e.style.setProperty('overflow-y', 'auto', 'important');
+    if (cs.position === 'fixed') { e.style.setProperty('position', 'static', 'important'); e.style.setProperty('top', 'auto', 'important'); }
+  }
+  for (const c of ['modal-open', 'no-scroll', 'noscroll', 'overflow-hidden', 'popup-open', 'pum-open', 'lock-scroll', 'fancybox-active', 'mfp-zoom-out-cur'])
+    document.body.classList.remove(c), document.documentElement.classList.remove(c);
+}"""
+
+
 def log(*a):
     print(time.strftime("%H:%M:%S"), *a, flush=True)
 
@@ -268,6 +327,7 @@ class Crawler:
         self.documents = {}
         self.fixed_urls = fixed_urls
         self.query_variants = {}
+        self.popup_sigs = set()  # each distinct popup is photographed once per site, not on every page
         self.shot_lock = asyncio.Lock()  # Chromium can return stale tiles if two pages screenshot at once
         self.pair_keys = {}  # recheck mode: captured url -> key of the original page it re-checks
         self.started = now_iso()
@@ -407,6 +467,45 @@ class Crawler:
         except Exception:
             pass
 
+    async def clear_overlays(self, page, popup_shot=None):
+        """Close/hide modal overlays so screenshots show the page. Returns what was hidden (kept in data.json).
+        Several rounds, because popups often queue (e.g. mourning notice, then investor-report popup). With popup_shot,
+        each popup not yet seen on this site is photographed on its own first: screenshot_popup.jpg, _2, _3..."""
+        found = []
+        try:
+            for _ in range(4):
+                await page.keyboard.press("Escape")
+                if await page.evaluate(CLOSE_JS):
+                    await page.wait_for_timeout(700)
+                rnd = await page.evaluate(OVERLAY_MARK_JS)
+                if not rnd:
+                    break
+                found += rnd
+                if popup_shot is not None:
+                    await page.evaluate("window.scrollTo(0,0)")
+                    content = [i for i, o in enumerate(rnd) if o["text"] or o["images"]] or list(range(len(rnd)))
+                    for i in content:
+                        o = rnd[i]
+                        sig = (o["cls"], o["text"][:80], tuple(o["images"]))
+                        if sig in self.popup_sigs:
+                            continue
+                        self.popup_sigs.add(sig)
+                        # show only this popup (+ any plain backdrops) while photographing it
+                        await page.evaluate("""([keep, nofill]) => [...document.querySelectorAll('[data-lsa-overlay="1"]')]
+                            .forEach((e, j) => e.style.visibility = (j === keep || nofill.includes(j)) ? '' : 'hidden')""",
+                                            [i, [j for j in range(len(rnd)) if j not in content]])
+                        n = sum(1 for f in popup_shot.parent.glob("screenshot_popup*.jpg"))
+                        dst = popup_shot if n == 0 else popup_shot.with_name(f"screenshot_popup_{n + 1}.jpg")
+                        async with self.shot_lock:
+                            await page.bring_to_front()
+                            await page.screenshot(path=str(dst), type="jpeg", quality=88, timeout=30000)
+                        o["shot"] = dst.name
+                await page.evaluate(OVERLAY_HIDE_JS)
+                await page.wait_for_timeout(800)  # let the next queued popup appear
+        except Exception as e:  # noqa
+            log(f"  overlay check failed: {str(e)[:120]}")
+        return found
+
     async def autoscroll(self, page):
         await page.evaluate("""async () => {
             document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager');
@@ -423,6 +522,83 @@ class Crawler:
             pass
         await page.wait_for_timeout(600)
 
+    async def shoot(self, page, folder, summary, mctx):
+        """Desktop full-page shot of the already-loaded page, then a fresh mobile load + shot."""
+        jpg = self.args.shot_format == "jpg"
+        if self.args.dismiss_popups:
+            await self.clear_overlays(page)  # timed popups can appear after the first check
+        await page.evaluate("window.scrollTo(0,0)")
+        try:
+            async with self.shot_lock:
+                await page.bring_to_front()
+                await page.wait_for_timeout(250)
+                await page.screenshot(path=str(folder / f"screenshot_desktop.{self.args.shot_format}"), full_page=True,
+                                      animations="disabled", type="jpeg" if jpg else "png",
+                                      **({"quality": 88} if jpg else {}), timeout=120000)
+            summary.pop("screenshot_error", None)
+        except Exception as e:  # noqa
+            summary["screenshot_error"] = str(e)[:200]
+        if mctx is None:
+            return
+        mp = await mctx.new_page()
+        try:
+            try:
+                await mp.goto(page.url, wait_until="networkidle", timeout=self.args.timeout * 1000)
+            except Exception:
+                await mp.goto(page.url, wait_until="load", timeout=self.args.timeout * 1000)
+            if self.args.dismiss_popups:
+                await self.dismiss_popups(mp)
+            await self.autoscroll(mp)
+            if self.args.dismiss_popups:
+                await self.clear_overlays(mp)
+            await mp.evaluate("window.scrollTo(0,0)")
+            async with self.shot_lock:
+                await mp.bring_to_front()
+                await mp.wait_for_timeout(250)
+                await mp.screenshot(path=str(folder / f"screenshot_mobile.{self.args.shot_format}"), full_page=True,
+                                    animations="disabled", type="jpeg" if jpg else "png",
+                                    **({"quality": 85} if jpg else {}), timeout=120000)
+            summary.pop("mobile_error", None)
+        except Exception as e:  # noqa
+            summary["mobile_error"] = str(e)[:200]
+        finally:
+            await mp.close()
+
+    async def reshoot(self, url, folder, d, ctx, mctx):
+        """--reshoot: keep the extracted data, redo screenshots (+ MHTML) with overlays cleared."""
+        summary = d["summary"]
+        page = await ctx.new_page()
+        try:
+            try:
+                await page.goto(url, wait_until="networkidle", timeout=self.args.timeout * 1000)
+            except Exception:
+                await page.goto(url, wait_until="load", timeout=self.args.timeout * 1000)
+            if self.args.dismiss_popups:
+                await self.dismiss_popups(page)
+            await self.autoscroll(page)
+            if self.args.dismiss_popups:
+                for f in folder.glob("screenshot_popup*.jpg"):
+                    f.unlink()
+                summary["overlays_hidden"] = await self.clear_overlays(page, folder / "screenshot_popup.jpg")
+            try:
+                cdp = await ctx.new_cdp_session(page)
+                snap = await cdp.send("Page.captureSnapshot", {"format": "mhtml"})
+                (folder / "page.mhtml").write_text(snap["data"], "utf-8")
+                await cdp.detach()
+            except Exception:
+                pass
+            await self.shoot(page, folder, summary, mctx)
+            summary["reshot_at"] = now_iso()
+            (folder / "thumb.jpg").unlink(missing_ok=True)  # report.py rebuilds it from the new shot
+            (folder / "data.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), "utf-8")
+            n = len(summary.get("overlays_hidden") or [])
+            hid = f" (hid {n} overlay{'s' if n > 1 else ''})" if n else ""
+            log(f"  ⟳ reshot{hid}: {url}")
+        except Exception as e:  # noqa
+            log(f"  ✗ reshoot failed, kept old screenshots: {url}  {str(e)[:150]}")
+        finally:
+            await page.close()
+
     async def capture(self, url, ctx, mctx):
         meta = self.seen[url]
         key = self.scope.key(url)
@@ -432,9 +608,11 @@ class Crawler:
             st = d.get("summary", {}).get("status") or 0
             # only skip good captures; failed pages, timeouts and 5xx (e.g. 508 host throttling) are retried
             if "content" in d and 0 < st < 500:
-                self.results[url] = d["summary"]
                 for l in d.get("links", []):
                     self.enqueue(l.get("href"), meta["depth"] + 1, "link", url)
+                if self.args.reshoot:
+                    await self.reshoot(url, folder, d, ctx, mctx)
+                self.results[url] = d["summary"]
                 return
             log(f"  ↻ retrying previously failed page (status {st or 'error'}): {url}")
         folder.mkdir(parents=True, exist_ok=True)
@@ -479,6 +657,8 @@ class Crawler:
             if self.args.dismiss_popups:
                 await self.dismiss_popups(page)
             await self.autoscroll(page)
+            if self.args.dismiss_popups:
+                summary["overlays_hidden"] = await self.clear_overlays(page, folder / "screenshot_popup.jpg")
             data = await page.evaluate(EXTRACT_JS)
             rendered = await page.content()
             (folder / "rendered.html").write_text(rendered, "utf-8")
@@ -490,37 +670,7 @@ class Crawler:
                 await cdp.detach()
             except Exception as e:  # noqa
                 summary["mhtml_error"] = str(e)[:200]
-            await page.evaluate("window.scrollTo(0,0)")
-            shot = folder / f"screenshot_desktop.{self.args.shot_format}"
-            try:
-                async with self.shot_lock:
-                    await page.bring_to_front()
-                    await page.wait_for_timeout(250)
-                    await page.screenshot(path=str(shot), full_page=True, animations="disabled",
-                                          type="jpeg" if self.args.shot_format == "jpg" else "png",
-                                          **({"quality": 88} if self.args.shot_format == "jpg" else {}), timeout=120000)
-            except Exception as e:  # noqa
-                summary["screenshot_error"] = str(e)[:200]
-            if mctx is not None:
-                mp = await mctx.new_page()
-                try:
-                    try:
-                        await mp.goto(page.url, wait_until="networkidle", timeout=self.args.timeout * 1000)
-                    except Exception:
-                        await mp.goto(page.url, wait_until="load", timeout=self.args.timeout * 1000)
-                    if self.args.dismiss_popups:
-                        await self.dismiss_popups(mp)
-                    await self.autoscroll(mp)
-                    async with self.shot_lock:
-                        await mp.bring_to_front()
-                        await mp.wait_for_timeout(250)
-                        await mp.screenshot(path=str(folder / f"screenshot_mobile.{self.args.shot_format}"), full_page=True,
-                                            animations="disabled", type="jpeg" if self.args.shot_format == "jpg" else "png",
-                                            **({"quality": 85} if self.args.shot_format == "jpg" else {}), timeout=120000)
-                except Exception as e:  # noqa
-                    summary["mobile_error"] = str(e)[:200]
-                finally:
-                    await mp.close()
+            await self.shoot(page, folder, summary, mctx)
         except Exception as e:  # noqa
             summary["error"] = f"{type(e).__name__}: {str(e)[:300]}"
             data = None
@@ -713,6 +863,8 @@ def parse_args(argv=None):
     ap.add_argument("--max-video-mb", type=int, default=300)
     ap.add_argument("--dismiss-popups", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--resume", action="store_true", help="skip pages already captured in the output folder")
+    ap.add_argument("--reshoot", action="store_true",
+                    help="with --resume: redo only screenshots + MHTML of captured pages (popups cleared); copy/assets kept")
     ap.add_argument("--chromium", default=None, help="path to a Chromium binary (else Playwright's own)")
     ap.add_argument("--recheck", default=None, help="existing site archive folder whose page list to re-capture")
     ap.add_argument("--origin", default=None, help="with --recheck: origin to capture against, e.g. https://mirror.example.com")
@@ -724,6 +876,8 @@ def parse_args(argv=None):
 
 def main(argv=None):
     args = parse_args(argv)
+    if args.reshoot:
+        args.resume = True
     sys.path.insert(0, str(HERE))
     sites = load_sites()
     if args.config_override:

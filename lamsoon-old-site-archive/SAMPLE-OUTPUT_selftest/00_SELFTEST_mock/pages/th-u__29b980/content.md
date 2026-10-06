@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/th/สินค้า/
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 1  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T11:03:31+00:00
+- **Captured:** 2026-10-06T15:44:43+00:00
 - **Words (main):** 5  ·  **Images:** 0  ·  **Forms:** 0
 
 ## SEO / meta

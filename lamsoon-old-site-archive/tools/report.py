@@ -129,6 +129,8 @@ def build_site(out: Path):
             links.append(l)
         files = [(n, dsc) for n, dsc in [
             (shot(folder, "desktop"), "Full-page screenshot, desktop 1440px"), (shot(folder, "mobile"), "Full-page screenshot, mobile 390px @2x"),
+            *[(f.name, "Popup/overlay that covered this page on load (hidden for the screenshots above)")
+              for f in sorted(folder.glob("screenshot_popup*.jpg"))],
             ("snapshot.html", "Offline browsable copy (local assets, scripts removed)"), ("page.mhtml", "Single-file MHTML archive (open in Chrome/Edge)"),
             ("rendered.html", "DOM after JavaScript ran (original asset URLs)"), ("raw.html", "HTML exactly as served by the server"),
             ("content.md", "Copy document: SEO, page copy in order, image list, forms, links"), ("text.txt", "Visible text"), ("data.json", "Everything extracted (machine-readable)")]

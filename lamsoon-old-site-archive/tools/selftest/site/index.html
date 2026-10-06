@@ -16,4 +16,15 @@
 </section>
 <div class="section-bg"><h3>Community</h3><p>Background section</p></div>
 </main><footer><p>© Lam Soon (M) Berhad. Tel: <a href="tel:+60351234567">+603 5123 4567</a></p></footer>
-<script>gtag('config','G-ABCDEF1234');</script></body></html>
+<script>gtag('config','G-ABCDEF1234');</script><!-- mock announcement popup: image only, no text button (like the TH mourning notice) -->
+<script>setTimeout(function(){var w=document.createElement('div');w.id='announce';w.className='notice-wrap';
+w.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;display:flex;align-items:center;justify-content:center';
+w.innerHTML='<div style="background:#222;border:6px solid #fff;padding:30px;color:#fff;font-size:22px">Mock mourning notice<br><img src="img/logo.png" width="80"></div>';
+document.body.appendChild(w);document.body.style.overflow='hidden';},400);</script>
+<!-- mock second popup (investor report): separate backdrop + modal box, appears after the first -->
+<script>setTimeout(function(){var b=document.createElement('div');b.className='modal-backdrop';
+b.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100000';document.body.appendChild(b);
+var m=document.createElement('div');m.className='modal investor-popup';
+m.style.cssText='position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;height:340px;background:#fff;z-index:100001;padding:20px';
+m.innerHTML='<h3>Annual Report 2569</h3><a href="docs/annual.pdf">Download report</a>';document.body.appendChild(m);},900);</script>
+</body></html>

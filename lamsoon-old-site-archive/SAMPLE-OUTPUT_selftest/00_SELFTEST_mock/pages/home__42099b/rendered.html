@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Lam Soon Malaysia | Home</title>
 <meta name="description" content="Lam Soon Malaysia home page"><meta property="og:image" content="/img/hero1.jpg">
 <link rel="icon" href="/img/logo.png"><link rel="stylesheet" href="/css/style.css">
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEF1234"></script></head><body>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEF1234"></script></head><body style="overflow-x: hidden; overflow-y: auto !important;">
 <header class="site-header"><img src="/img/logo.png" alt="Lam Soon logo"><nav><a href="/">Home</a> <a href="/about.aspx">About Us</a> <a href="/brands/knife/">Knife</a> <a href="/contact.aspx">Contact</a> <a href="/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/">สินค้า</a></nav></header>
 <main>
 <div class="hero"><div class="slide" style="background-image:url('/img/hero1.jpg')"><h1>Nourishing Malaysian families</h1></div><div class="slide" style="background-image:url('/img/hero2.jpg')"><h2>Hidden slide headline</h2></div></div>
@@ -16,5 +16,16 @@
 </section>
 <div class="section-bg"><h3>Community</h3><p>Background section</p></div>
 </main><footer><p>© Lam Soon (M) Berhad. Tel: <a href="tel:+60351234567">+603 5123 4567</a></p></footer>
-<script>gtag('config','G-ABCDEF1234');</script>
-</body></html>
+<script>gtag('config','G-ABCDEF1234');</script><!-- mock announcement popup: image only, no text button (like the TH mourning notice) -->
+<script>setTimeout(function(){var w=document.createElement('div');w.id='announce';w.className='notice-wrap';
+w.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;display:flex;align-items:center;justify-content:center';
+w.innerHTML='<div style="background:#222;border:6px solid #fff;padding:30px;color:#fff;font-size:22px">Mock mourning notice<br><img src="img/logo.png" width="80"></div>';
+document.body.appendChild(w);document.body.style.overflow='hidden';},400);</script>
+<!-- mock second popup (investor report): separate backdrop + modal box, appears after the first -->
+<script>setTimeout(function(){var b=document.createElement('div');b.className='modal-backdrop';
+b.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100000';document.body.appendChild(b);
+var m=document.createElement('div');m.className='modal investor-popup';
+m.style.cssText='position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;height:340px;background:#fff;z-index:100001;padding:20px';
+m.innerHTML='<h3>Annual Report 2569</h3><a href="docs/annual.pdf">Download report</a>';document.body.appendChild(m);},900);</script>
+
+<div id="announce" class="notice-wrap" data-lsa-overlay="2" style="position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.85); z-index: 99999; display: none !important; align-items: center; justify-content: center; visibility: hidden;"><div style="background:#222;border:6px solid #fff;padding:30px;color:#fff;font-size:22px">Mock mourning notice<br><img src="img/logo.png" width="80"></div></div><div class="modal-backdrop" data-lsa-overlay="2" style="position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.5); z-index: 100000; display: none !important;"></div><div class="modal investor-popup" data-lsa-overlay="2" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 520px; height: 340px; background: rgb(255, 255, 255); z-index: 100001; padding: 20px; display: none !important;"><h3>Annual Report 2569</h3><a href="docs/annual.pdf">Download report</a></div></body></html>

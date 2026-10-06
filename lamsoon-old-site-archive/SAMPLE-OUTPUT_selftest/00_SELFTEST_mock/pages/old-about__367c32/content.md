@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/old-about
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 99  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T11:03:21+00:00
+- **Captured:** 2026-10-06T15:44:32+00:00
 - **Words (main):** 9  ·  **Images:** 1  ·  **Forms:** 0
 
 ## SEO / meta
