@@ -322,6 +322,7 @@ class Crawler:
         self.queue = asyncio.Queue()
         self.seen = {}  # url -> {depth, found_via, parent}
         self.results = {}  # url -> summary
+        self.skipped = 0
         self.out_of_scope = {}
         self.external = {}
         self.documents = {}
@@ -610,10 +611,14 @@ class Crawler:
             if "content" in d and 0 < st < 500:
                 for l in d.get("links", []):
                     self.enqueue(l.get("href"), meta["depth"] + 1, "link", url)
+                self.results[url] = d["summary"]
                 if self.args.reshoot:
                     await self.reshoot(url, folder, d, ctx, mctx)
-                self.results[url] = d["summary"]
-                return
+                    return
+                self.skipped += 1
+                if self.skipped % 100 == 0:
+                    log(f"  … resume: {self.skipped} already-captured pages skipped so far")
+                return "skipped"
             log(f"  ↻ retrying previously failed page (status {st or 'error'}): {url}")
         folder.mkdir(parents=True, exist_ok=True)
         page = await ctx.new_page()
@@ -755,8 +760,7 @@ class Crawler:
         while True:
             url = await self.queue.get()
             try:
-                await self.capture(url, ctx, mctx)
-                if self.args.delay:
+                if await self.capture(url, ctx, mctx) != "skipped" and self.args.delay:
                     await asyncio.sleep(self.args.delay)
             except Exception as e:  # noqa
                 log("  worker error", url, e)
