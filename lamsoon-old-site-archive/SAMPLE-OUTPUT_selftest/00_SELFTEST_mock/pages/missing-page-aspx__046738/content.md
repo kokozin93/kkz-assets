@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/missing-page.aspx
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 1  ·  **HTTP:** 404
-- **Captured:** 2026-10-06T15:44:46+00:00
+- **Captured:** 2026-10-06T17:03:59+00:00
 - **Words (main):** 19  ·  **Images:** 0  ·  **Forms:** 0
 
 ## SEO / meta

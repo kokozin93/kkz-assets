@@ -21,7 +21,7 @@ Needs Python 3.10+ and internet access to the old sites. Nothing else; no server
 ./run.sh th-en,th-th             # then Thailand, both languages
 ./run.sh my --max-pages 15       # 2-minute trial run
 ./run.sh my --resume             # continue after an interruption
-./run.sh th-en,th-th --reshoot   # redo ONLY screenshots + MHTML (popups cleared); copy, assets, IDs kept
+./run.sh th-en,th-th --reshoot   # redo ONLY screenshots, MHTML + offline snapshot (popups + cookie bar hidden); copy, assets, IDs kept
 ```
 Windows: `run.bat my`. Then open `archive/index.html` in Chrome/Edge.
 
@@ -88,7 +88,7 @@ Page IDs (`P001…`) are ordered by click-depth from home, then URL — stable a
 3. TH only: WordPress REST API — all pages, posts and custom post types, plus the full media library.
 4. Pages found only via 2/3 are flagged **orphan**; same-host pages outside the language scope (e.g. TH root pages not under `/en/` or `/th/`) are listed in ISSUES so nothing is silently skipped.
 
-Each page is loaded in headless Chromium, popups/cookie bars dismissed (text buttons, × / close icons, then any remaining full-screen modal layer is photographed once and hidden; listed per page in `data.json → summary.overlays_hidden`), scrolled to the bottom to trigger lazy loading, then captured. Every image/font/stylesheet the browser downloads is saved from the network response itself; images referenced but not yet loaded (lazy, srcset, hover backgrounds in CSS) are fetched afterwards.
+Each page is loaded in headless Chromium, popups/cookie bars dismissed (text buttons, × / close icons, then any remaining full-screen modal layer is photographed once and hidden; cookie/PDPA consent bars are hidden without a photo; listed per page in `data.json → summary.overlays_hidden`), scrolled to the bottom to trigger lazy loading, then captured. Every image/font/stylesheet the browser downloads is saved from the network response itself; images referenced but not yet loaded (lazy, srcset, hover backgrounds in CSS) are fetched afterwards.
 
 ## Tools
 

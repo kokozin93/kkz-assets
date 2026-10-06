@@ -1,16 +1,16 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://127.0.0.1:8765/about.aspx
 Subject: About Us
-Date: Tue, 6 Oct 2026 15:45:07 +0000
+Date: Tue, 6 Oct 2026 17:03:47 +0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----"
+	boundary="----MultipartBoundary--PoACpTgTA95HSbO9jGmBu4c383FPnGZFm4cNe1EfSz----"
 
 
-------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
+------MultipartBoundary--PoACpTgTA95HSbO9jGmBu4c383FPnGZFm4cNe1EfSz----
 Content-Type: text/html
-Content-ID: <frame-F30693B680375014113C3FBA982686B3@mhtml.blink>
+Content-ID: <frame-80763F4213277DBD6DACE773A350D5B9@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/about.aspx
 
@@ -26,7 +26,7 @@ ut.aspx"></form>
 <footer>Footer</footer>
 
 </body></html>
-------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
+------MultipartBoundary--PoACpTgTA95HSbO9jGmBu4c383FPnGZFm4cNe1EfSz----
 Content-Type: image/jpeg
 Content-Transfer-Encoding: base64
 Content-Location: http://127.0.0.1:8765/img/hero2.jpg
@@ -260,7 +260,7 @@ ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
 iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
 KACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==
 
-------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b----
+------MultipartBoundary--PoACpTgTA95HSbO9jGmBu4c383FPnGZFm4cNe1EfSz----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://127.0.0.1:8765/css/style.css
@@ -290,4 +290,4 @@ footer { background: rgb(34, 34, 34); color: rgb(204, 204, 204); padding: 2=
 .tab { display: none; }
 
 .tab.active { display: block; }
-------MultipartBoundary--speFg5MWWneHvGlTkA2vqKpxGf3hltEbez1WD8ny9b------
+------MultipartBoundary--PoACpTgTA95HSbO9jGmBu4c383FPnGZFm4cNe1EfSz------

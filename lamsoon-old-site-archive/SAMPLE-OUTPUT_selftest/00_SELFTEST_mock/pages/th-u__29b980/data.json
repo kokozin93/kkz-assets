@@ -89,7 +89,7 @@
    "link"
   ],
   "parent": "http://127.0.0.1:8765/",
-  "captured_at": "2026-10-06T15:44:43+00:00",
+  "captured_at": "2026-10-06T17:03:59+00:00",
   "status": 200,
   "final_url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
   "redirected": false,
@@ -115,7 +115,6 @@
   "emails": [],
   "page_h": 900,
   "orphan": false,
-  "id": "P006",
-  "reshot_at": "2026-10-06T15:45:19+00:00"
+  "id": "P006"
  }
 }

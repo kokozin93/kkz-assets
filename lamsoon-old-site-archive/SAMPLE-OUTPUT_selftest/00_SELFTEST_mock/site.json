@@ -22,8 +22,8 @@
   "notes": "self-test",
   "key": "mock"
  },
- "started": "2026-10-06T15:45:00+00:00",
- "finished": "2026-10-06T15:45:23+00:00",
+ "started": "2026-10-06T17:03:44+00:00",
+ "finished": "2026-10-06T17:04:04+00:00",
  "platform_hints": [
   "ASP.NET",
   "Google Tag Manager",
@@ -54,7 +54,7 @@
     "link"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T15:44:28+00:00",
+   "captured_at": "2026-10-06T17:03:45+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/",
    "redirected": false,
@@ -63,6 +63,16 @@
    "x_powered_by": "",
    "x_frame_options": "",
    "overlays_hidden": [
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "cookie-consent bottom-bar",
+     "z": 999,
+     "cover": 0,
+     "cookie": true,
+     "text": "เว็บไซต์นี้ใช้คุกกี้ Read term and privacy policy ALLOW NOT ALLOW",
+     "images": []
+    },
     {
      "tag": "div",
      "id": "announce",
@@ -100,9 +110,9 @@
     "Nourishing Malaysian families"
    ],
    "lang": "en",
-   "words": 52,
-   "blocks": 17,
-   "hidden_blocks": 5,
+   "words": 60,
+   "blocks": 18,
+   "hidden_blocks": 6,
    "images": 6,
    "svgs": 1,
    "icon_fonts": 1,
@@ -114,8 +124,7 @@
    ],
    "page_h": 2059,
    "orphan": false,
-   "id": "P001",
-   "reshot_at": "2026-10-06T15:45:08+00:00"
+   "id": "P001"
   },
   {
    "url": "http://127.0.0.1:8765/about.aspx",
@@ -127,7 +136,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T15:44:35+00:00",
+   "captured_at": "2026-10-06T17:03:55+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/about.aspx",
    "redirected": false,
@@ -153,8 +162,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P002",
-   "reshot_at": "2026-10-06T15:45:14+00:00"
+   "id": "P002"
   },
   {
    "url": "http://127.0.0.1:8765/brands/knife/",
@@ -166,7 +174,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T15:44:38+00:00",
+   "captured_at": "2026-10-06T17:03:55+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/brands/knife/",
    "redirected": false,
@@ -192,8 +200,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P003",
-   "reshot_at": "2026-10-06T15:45:15+00:00"
+   "id": "P003"
   },
   {
    "url": "http://127.0.0.1:8765/contact.aspx",
@@ -205,7 +212,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T15:44:42+00:00",
+   "captured_at": "2026-10-06T17:03:55+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/contact.aspx",
    "redirected": false,
@@ -233,8 +240,7 @@
    ],
    "page_h": 900,
    "orphan": false,
-   "id": "P004",
-   "reshot_at": "2026-10-06T15:45:18+00:00"
+   "id": "P004"
   },
   {
    "url": "http://127.0.0.1:8765/missing-page.aspx",
@@ -246,7 +252,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T15:44:46+00:00",
+   "captured_at": "2026-10-06T17:03:59+00:00",
    "status": 404,
    "final_url": "http://127.0.0.1:8765/missing-page.aspx",
    "redirected": false,
@@ -272,8 +278,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P005",
-   "reshot_at": "2026-10-06T15:45:22+00:00"
+   "id": "P005"
   },
   {
    "url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
@@ -285,7 +290,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/",
-   "captured_at": "2026-10-06T15:44:43+00:00",
+   "captured_at": "2026-10-06T17:03:59+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
    "redirected": false,
@@ -311,8 +316,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P006",
-   "reshot_at": "2026-10-06T15:45:19+00:00"
+   "id": "P006"
   },
   {
    "url": "http://127.0.0.1:8765/brands/knife/?sku=2",
@@ -324,7 +328,7 @@
     "link"
    ],
    "parent": "http://127.0.0.1:8765/brands/knife/",
-   "captured_at": "2026-10-06T15:44:47+00:00",
+   "captured_at": "2026-10-06T17:04:00+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/brands/knife/?sku=2",
    "redirected": false,
@@ -350,8 +354,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": false,
-   "id": "P007",
-   "reshot_at": "2026-10-06T15:45:23+00:00"
+   "id": "P007"
   },
   {
    "url": "http://127.0.0.1:8765/old-about",
@@ -363,7 +366,7 @@
     "sitemap"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T15:44:32+00:00",
+   "captured_at": "2026-10-06T17:03:45+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/about.aspx",
    "redirected": true,
@@ -389,8 +392,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": true,
-   "id": "P008",
-   "reshot_at": "2026-10-06T15:45:11+00:00"
+   "id": "P008"
   },
   {
    "url": "http://127.0.0.1:8765/orphan.aspx",
@@ -402,7 +404,7 @@
     "sitemap"
    ],
    "parent": null,
-   "captured_at": "2026-10-06T15:44:28+00:00",
+   "captured_at": "2026-10-06T17:03:45+00:00",
    "status": 200,
    "final_url": "http://127.0.0.1:8765/orphan.aspx",
    "redirected": false,
@@ -428,8 +430,7 @@
    "emails": [],
    "page_h": 900,
    "orphan": true,
-   "id": "P009",
-   "reshot_at": "2026-10-06T15:45:05+00:00"
+   "id": "P009"
   }
  ]
 }

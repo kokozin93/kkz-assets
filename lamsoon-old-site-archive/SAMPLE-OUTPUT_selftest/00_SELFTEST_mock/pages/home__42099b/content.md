@@ -2,8 +2,8 @@
 
 - **Live URL:** http://127.0.0.1:8765/
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 0  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T15:44:28+00:00
-- **Words (main):** 52  ·  **Images:** 6  ·  **Forms:** 0
+- **Captured:** 2026-10-06T17:03:45+00:00
+- **Words (main):** 60  ·  **Images:** 6  ·  **Forms:** 0
 
 ## SEO / meta
 
@@ -46,6 +46,8 @@ Annual report (PDF) · Broken link · Facebook · Email us
 ##### Community
 
 Background section
+
+_[hidden]_ เว็บไซต์นี้ใช้คุกกี้ Read term and privacy policy ALLOWNOT ALLOW
 
 _[hidden]_ Mock mourning notice
 

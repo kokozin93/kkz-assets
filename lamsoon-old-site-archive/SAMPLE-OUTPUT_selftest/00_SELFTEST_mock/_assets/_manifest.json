@@ -6,6 +6,13 @@
   "sha1": "94728c0ead79a75834b456fc4a93dd85fe87c9fd",
   "via": "network"
  },
+ "http://127.0.0.1:8765/img/hero2.jpg": {
+  "file": "127.0.0.1_8765/img/hero2.jpg",
+  "bytes": 12967,
+  "ctype": "image/jpeg",
+  "sha1": "9a926bccb0cac0887272ebf969fbcc9f38d5d9b6",
+  "via": "network"
+ },
  "http://127.0.0.1:8765/img/logo.png": {
   "file": "127.0.0.1_8765/img/logo.png",
   "bytes": 1016,
@@ -39,13 +46,6 @@
   "bytes": 9910,
   "ctype": "image/jpeg",
   "sha1": "d4afb291e99b7cd215c3ef11d5f3589eb93a2810",
-  "via": "network"
- },
- "http://127.0.0.1:8765/img/hero2.jpg": {
-  "file": "127.0.0.1_8765/img/hero2.jpg",
-  "bytes": 12967,
-  "ctype": "image/jpeg",
-  "sha1": "9a926bccb0cac0887272ebf969fbcc9f38d5d9b6",
   "via": "network"
  },
  "http://127.0.0.1:8765/img/knife-oil.jpg": {

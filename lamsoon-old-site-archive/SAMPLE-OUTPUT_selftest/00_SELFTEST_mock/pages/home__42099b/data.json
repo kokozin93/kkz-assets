@@ -147,6 +147,15 @@
    "heading": null,
    "region": "main",
    "visible": false,
+   "path": "html > body > div.bottom-bar",
+   "link": null,
+   "text": "เว็บไซต์นี้ใช้คุกกี้ Read term and privacy policy ALLOWNOT ALLOW"
+  },
+  {
+   "tag": "div",
+   "heading": null,
+   "region": "main",
+   "visible": false,
    "path": "div#announce > div",
    "link": null,
    "text": "Mock mourning notice"
@@ -537,7 +546,7 @@
    "link"
   ],
   "parent": null,
-  "captured_at": "2026-10-06T15:44:28+00:00",
+  "captured_at": "2026-10-06T17:03:45+00:00",
   "status": 200,
   "final_url": "http://127.0.0.1:8765/",
   "redirected": false,
@@ -546,6 +555,16 @@
   "x_powered_by": "",
   "x_frame_options": "",
   "overlays_hidden": [
+   {
+    "tag": "div",
+    "id": "",
+    "cls": "cookie-consent bottom-bar",
+    "z": 999,
+    "cover": 0,
+    "cookie": true,
+    "text": "เว็บไซต์นี้ใช้คุกกี้ Read term and privacy policy ALLOW NOT ALLOW",
+    "images": []
+   },
    {
     "tag": "div",
     "id": "announce",
@@ -583,9 +602,9 @@
    "Nourishing Malaysian families"
   ],
   "lang": "en",
-  "words": 52,
-  "blocks": 17,
-  "hidden_blocks": 5,
+  "words": 60,
+  "blocks": 18,
+  "hidden_blocks": 6,
   "images": 6,
   "svgs": 1,
   "icon_fonts": 1,
@@ -597,7 +616,6 @@
   ],
   "page_h": 2059,
   "orphan": false,
-  "id": "P001",
-  "reshot_at": "2026-10-06T15:45:08+00:00"
+  "id": "P001"
  }
 }

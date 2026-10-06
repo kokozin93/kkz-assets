@@ -206,7 +206,7 @@
    "link"
   ],
   "parent": "http://127.0.0.1:8765/",
-  "captured_at": "2026-10-06T15:44:42+00:00",
+  "captured_at": "2026-10-06T17:03:55+00:00",
   "status": 200,
   "final_url": "http://127.0.0.1:8765/contact.aspx",
   "redirected": false,
@@ -234,7 +234,6 @@
   ],
   "page_h": 900,
   "orphan": false,
-  "id": "P004",
-  "reshot_at": "2026-10-06T15:45:18+00:00"
+  "id": "P004"
  }
 }

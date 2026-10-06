@@ -2,7 +2,7 @@
 
 - **Live URL:** http://127.0.0.1:8765/about.aspx
 - **Site:** MOCK old site (self-test)  ·  **Depth from home:** 1  ·  **HTTP:** 200
-- **Captured:** 2026-10-06T15:44:35+00:00
+- **Captured:** 2026-10-06T17:03:55+00:00
 - **Words (main):** 9  ·  **Images:** 1  ·  **Forms:** 0
 
 ## SEO / meta

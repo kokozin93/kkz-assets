@@ -89,14 +89,30 @@ CLOSE_JS = r"""() => {
 OVERLAY_MARK_JS = r"""() => {
   const vw = innerWidth, vh = innerHeight, area = vw * vh;
   const bodyLen = (document.body.innerText || '').length || 1;
+  const COOKIE = /cookie|consent|gdpr|pdpa|cc-window|cc-banner|cky-|cmplz|moove|borlabs|termly|onetrust|cookieyes|privacy-bar/i;
+  const COOKIE_TXT = /cookie|คุกกี้|privacy|ความเป็นส่วนตัว|personal data|ข้อมูลส่วนบุคคล/i;
+  const ACCEPT = /^(allow|allow all|accept|accept all|agree|i agree|ok|okay|got it|yes|ยอมรับ|อนุญาต|ตกลง|ยินยอม)/i;
   const KW = /modal|popup|pop-up|overlay|lightbox|dialog|announce|mourn|notice|splash|fancybox|mfp|pum-|colorbox|featherlight|lity|sgpb|swal|backdrop/i;
   const out = [];
   for (const el of document.querySelectorAll('body *')) {
     if (el.closest('[data-lsa-overlay]') || el.closest('header,nav')) continue;
     const cs = getComputedStyle(el);
     const z = parseInt(cs.zIndex) || 0;
-    if (!(cs.position === 'fixed' || (cs.position === 'absolute' && z >= 1000))) continue;
+    const pinned = cs.position === 'fixed' || cs.position === 'sticky';
+    if (!(pinned || cs.position === 'absolute')) continue;
     if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) < 0.05) continue;
+    // cookie / PDPA consent bars: usually thin bars pinned to the bottom, so they never pass the cover test below
+    const txt = (el.innerText || '').trim();
+    const cookie = txt.length > 0 && txt.length < 800 && (COOKIE.test(`${el.id} ${typeof el.className === 'string' ? el.className : ''}`) ||
+      (COOKIE_TXT.test(txt) && [...el.querySelectorAll('a,button,input[type=button],input[type=submit]')]
+        .some((b) => ACCEPT.test((b.innerText || b.value || '').trim()))));
+    if (cookie && (pinned || z >= 10) && !el.parentElement.closest('[data-lsa-cookie]')) {
+      el.setAttribute('data-lsa-overlay', '1'); el.setAttribute('data-lsa-cookie', '1');
+      out.push({tag: el.tagName.toLowerCase(), id: el.id, cls: 'cookie-consent ' + (typeof el.className === 'string' ? el.className : '').slice(0, 140),
+                z, cover: 0, cookie: true, text: txt.slice(0, 300), images: []});
+      continue;
+    }
+    if (!(cs.position === 'fixed' || z >= 1000)) continue;
     const r = el.getBoundingClientRect();
     const cover = Math.max(0, Math.min(r.right, vw) - Math.max(r.left, 0)) * Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0)) / area;
     const sig = `${el.id} ${typeof el.className === 'string' ? el.className : ''} ${el.getAttribute('role') || ''} ${el.getAttribute('aria-modal') === 'true' ? 'modal' : ''}`;
@@ -484,7 +500,7 @@ class Crawler:
                 found += rnd
                 if popup_shot is not None:
                     await page.evaluate("window.scrollTo(0,0)")
-                    content = [i for i, o in enumerate(rnd) if o["text"] or o["images"]] or list(range(len(rnd)))
+                    content = [i for i, o in enumerate(rnd) if (o["text"] or o["images"]) and not o.get("cookie")]
                     for i in content:
                         o = rnd[i]
                         sig = (o["cls"], o["text"][:80], tuple(o["images"]))
@@ -571,9 +587,11 @@ class Crawler:
         page = await ctx.new_page()
         try:
             try:
-                await page.goto(url, wait_until="networkidle", timeout=self.args.timeout * 1000)
+                resp = await page.goto(url, wait_until="networkidle", timeout=self.args.timeout * 1000)
             except Exception:
-                await page.goto(url, wait_until="load", timeout=self.args.timeout * 1000)
+                resp = await page.goto(url, wait_until="load", timeout=self.args.timeout * 1000)
+            if resp is not None and resp.status >= 400 and resp.status != summary.get("status"):
+                raise RuntimeError(f"HTTP {resp.status} on reload (was {summary.get('status')})")
             if self.args.dismiss_popups:
                 await self.dismiss_popups(page)
             await self.autoscroll(page)
@@ -581,6 +599,8 @@ class Crawler:
                 for f in folder.glob("screenshot_popup*.jpg"):
                     f.unlink()
                 summary["overlays_hidden"] = await self.clear_overlays(page, folder / "screenshot_popup.jpg")
+                # finalize builds snapshot.html from rendered.html: refresh it so the offline copy has popups hidden too
+                (folder / "rendered.html").write_text(await page.content(), "utf-8")
             try:
                 cdp = await ctx.new_cdp_session(page)
                 snap = await cdp.send("Page.captureSnapshot", {"format": "mhtml"})
