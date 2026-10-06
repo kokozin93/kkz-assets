@@ -1,0 +1,238 @@
+{
+ "meta": {
+  "title": "Contact Us",
+  "lang": "",
+  "url": "http://127.0.0.1:8766/contact.aspx",
+  "base": "http://127.0.0.1:8766/contact.aspx",
+  "metas": {},
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "Contact Us"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "a",
+   "heading": null,
+   "region": "header",
+   "visible": true,
+   "path": "html > body > header.site-header > a",
+   "link": "http://127.0.0.1:8766/",
+   "text": "Home"
+  },
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > h1",
+   "link": null,
+   "text": "Contact Us"
+  },
+  {
+   "tag": "form",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "form#contactForm",
+   "link": null,
+   "text": "NameEmailSend"
+  },
+  {
+   "tag": "option",
+   "heading": null,
+   "region": "main",
+   "visible": false,
+   "path": "form#contactForm > select > option",
+   "link": null,
+   "text": "Product enquiry"
+  },
+  {
+   "tag": "option",
+   "heading": null,
+   "region": "main",
+   "visible": false,
+   "path": "form#contactForm > select > option",
+   "link": null,
+   "text": "Careers"
+  },
+  {
+   "tag": "footer",
+   "heading": null,
+   "region": "footer",
+   "visible": true,
+   "path": "html > body > footer",
+   "link": null,
+   "text": "Footer"
+  }
+ ],
+ "images": [],
+ "svgs": [],
+ "iconFonts": [],
+ "media": [],
+ "links": [
+  {
+   "href": "http://127.0.0.1:8766/",
+   "raw": "/",
+   "text": "Home",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "header",
+   "visible": true,
+   "onclick": null
+  }
+ ],
+ "onclickNav": [],
+ "forms": [
+  {
+   "index": 0,
+   "id": "contactForm",
+   "name": null,
+   "cls": "",
+   "action": "http://127.0.0.1:8766/handlers/contact.ashx",
+   "action_raw": "/handlers/contact.ashx",
+   "method": "POST",
+   "enctype": null,
+   "region": "main",
+   "visible": true,
+   "field_count": 5,
+   "fields": [
+    {
+     "tag": "input",
+     "type": "hidden",
+     "name": "recipient",
+     "id": null,
+     "required": false,
+     "placeholder": null,
+     "label": null,
+     "value": "consumer@lamsoon.com.my"
+    },
+    {
+     "tag": "input",
+     "type": "input",
+     "name": "name",
+     "id": "n",
+     "required": true,
+     "placeholder": null,
+     "label": "Name",
+     "value": null
+    },
+    {
+     "tag": "input",
+     "type": "email",
+     "name": "email",
+     "id": "e",
+     "required": true,
+     "placeholder": null,
+     "label": "Email",
+     "value": null
+    },
+    {
+     "tag": "select",
+     "type": "select",
+     "name": "topic",
+     "id": null,
+     "required": false,
+     "placeholder": null,
+     "label": null,
+     "value": null,
+     "options": [
+      "Product enquiry",
+      "Careers"
+     ]
+    },
+    {
+     "tag": "textarea",
+     "type": "textarea",
+     "name": "msg",
+     "id": null,
+     "required": false,
+     "placeholder": "Message",
+     "label": null,
+     "value": null
+    },
+    {
+     "tag": "button",
+     "type": "submit",
+     "name": null,
+     "id": null,
+     "required": false,
+     "placeholder": null,
+     "label": null,
+     "value": "Send"
+    }
+   ]
+  }
+ ],
+ "scripts": [],
+ "styles": [
+  "http://127.0.0.1:8766/css/style.css"
+ ],
+ "page_size": {
+  "w": 1440,
+  "h": 900
+ },
+ "emails": [
+  "consumer@lamsoon.com.my"
+ ],
+ "tracking_ids": [],
+ "platform_hints": [
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8766/contact.aspx",
+   "type": "document",
+   "status": 200,
+   "ctype": "text/html; charset=utf-8"
+  },
+  {
+   "url": "http://127.0.0.1:8766/css/style.css",
+   "type": "stylesheet",
+   "status": 200,
+   "ctype": "text/css"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8766/contact.aspx",
+  "key": "/contact.aspx",
+  "pair_key": "/contact.aspx",
+  "folder": "contact-aspx__09e261",
+  "depth": 1,
+  "found_via": [
+   "recheck-list"
+  ],
+  "parent": null,
+  "captured_at": "2026-10-06T11:03:40+00:00",
+  "status": 200,
+  "final_url": "http://127.0.0.1:8766/contact.aspx",
+  "redirected": false,
+  "content_type": "text/html; charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "Contact Us",
+  "h1": [
+   "Contact Us"
+  ],
+  "lang": "",
+  "words": 6,
+  "blocks": 6,
+  "hidden_blocks": 2,
+  "images": 0,
+  "svgs": 0,
+  "icon_fonts": 0,
+  "links": 1,
+  "forms": 1,
+  "media": 0,
+  "emails": [
+   "consumer@lamsoon.com.my"
+  ],
+  "page_h": 900,
+  "orphan": false,
+  "id": "P004"
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "http://127.0.0.1:8765/img/hero2.jpg": {
+  "file": "127.0.0.1_8765/img/hero2.jpg",
+  "bytes": 12967,
+  "ctype": "image/jpeg",
+  "sha1": "9a926bccb0cac0887272ebf969fbcc9f38d5d9b6",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/css/style.css": {
+  "file": "127.0.0.1_8765/css/style.css",
+  "bytes": 584,
+  "ctype": "text/css",
+  "sha1": "94728c0ead79a75834b456fc4a93dd85fe87c9fd",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/logo.png": {
+  "file": "127.0.0.1_8765/img/logo.png",
+  "bytes": 1016,
+  "ctype": "image/png",
+  "sha1": "35a98881262e1e372db755ec4cada3f55de990d5",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/lazy-product.jpg": {
+  "file": "127.0.0.1_8765/img/lazy-product.jpg",
+  "bytes": 6622,
+  "ctype": "image/jpeg",
+  "sha1": "e713b22520cd498254a699b2cc63c962d0339f93",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/hero1.jpg": {
+  "file": "127.0.0.1_8765/img/hero1.jpg",
+  "bytes": 12466,
+  "ctype": "image/jpeg",
+  "sha1": "a926eece82362154415be60d9526ba0ec2948af2",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/tick.png": {
+  "file": "127.0.0.1_8765/img/tick.png",
+  "bytes": 82,
+  "ctype": "image/png",
+  "sha1": "4dedc9d1243bb13082a35caa887956568f251109",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/bg-section.jpg": {
+  "file": "127.0.0.1_8765/img/bg-section.jpg",
+  "bytes": 9910,
+  "ctype": "image/jpeg",
+  "sha1": "d4afb291e99b7cd215c3ef11d5f3589eb93a2810",
+  "via": "network"
+ },
+ "http://127.0.0.1:8765/img/knife-oil.jpg": {
+  "file": "127.0.0.1_8765/img/knife-oil.jpg",
+  "bytes": 4933,
+  "ctype": "image/jpeg",
+  "sha1": "735ca5f24f2281eaee4a291cae223c799d22fff3",
+  "via": "network"
+ }
+}

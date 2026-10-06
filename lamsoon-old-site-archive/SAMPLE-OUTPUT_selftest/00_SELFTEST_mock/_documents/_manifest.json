@@ -1,0 +1,9 @@
+{
+ "http://127.0.0.1:8765/docs/annual-report.pdf": {
+  "file": "127.0.0.1_8765/docs/annual-report.pdf",
+  "bytes": 16,
+  "ctype": "application/pdf",
+  "sha1": "a762b8ef2a9114ba3879fe9703aaf9d58a928407",
+  "via": "fetch"
+ }
+}

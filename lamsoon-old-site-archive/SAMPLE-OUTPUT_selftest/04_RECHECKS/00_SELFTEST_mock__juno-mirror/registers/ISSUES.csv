@@ -1,0 +1,7 @@
+﻿page_id,url,issue,detail
+P001,http://127.0.0.1:8766/,image not saved,http://127.0.0.1:8766/img/lazy-product.jpg  (HTTP 404)
+P005,http://127.0.0.1:8766/missing-page.aspx,HTTP 404,
+P008,http://127.0.0.1:8766/old-about,redirect,http://127.0.0.1:8766/about.aspx
+P008,http://127.0.0.1:8766/old-about,"orphan (in sitemap/API, not linked from crawled pages)",recheck-list
+P009,http://127.0.0.1:8766/orphan.aspx,HTTP 404,
+P009,http://127.0.0.1:8766/orphan.aspx,"orphan (in sitemap/API, not linked from crawled pages)",recheck-list

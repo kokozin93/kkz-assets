@@ -1,0 +1,4 @@
+﻿page_id,page_url,form,form_id,class,method,action,visible,fields,hidden_fields,submit,emails_on_page
+P002,http://127.0.0.1:8766/about.aspx,0,aspnetForm,,POST,http://127.0.0.1:8766/about.aspx,True,,__VIEWSTATE=dDwtMTA4MTI0,,
+P004,http://127.0.0.1:8766/contact.aspx,0,contactForm,,POST,http://127.0.0.1:8766/handlers/contact.ashx,True,"Name (input, required); Email (email, required); topic (select); Message (textarea)",recipient=consumer@lamsoon.com.my,Send,consumer@lamsoon.com.my
+P008,http://127.0.0.1:8766/old-about,0,aspnetForm,,POST,http://127.0.0.1:8766/about.aspx,True,,__VIEWSTATE=dDwtMTA4MTI0,,

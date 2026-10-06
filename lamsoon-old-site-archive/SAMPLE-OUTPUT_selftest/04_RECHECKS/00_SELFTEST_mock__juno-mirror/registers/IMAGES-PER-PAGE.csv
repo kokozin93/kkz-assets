@@ -1,0 +1,10 @@
+﻿page_id,n,category,file,alt,kind,natural,rendered,visible,region,link,original_url
+P001,1,logos,pages/home__42099b/assets/logos/001_logo.png,Lam Soon logo,img,200x60,200x60,True,header,,http://127.0.0.1:8766/img/logo.png
+P001,2,backgrounds,pages/home__42099b/assets/backgrounds/002_hero1.jpg,,css-bg,1440x500,1440x500,True,main,,http://127.0.0.1:8766/img/hero1.jpg
+P001,3,backgrounds,pages/home__42099b/assets/backgrounds/003_hero2.jpg,,css-bg,1440x500,x,False,main,,http://127.0.0.1:8766/img/hero2.jpg
+P001,4,icons,pages/home__42099b/assets/icons/004_tick.png,,pseudo-bg::before,16x16,16x16,True,main,,http://127.0.0.1:8766/img/tick.png
+P001,5,backgrounds,pages/home__42099b/assets/backgrounds/005_bg-section.jpg,,css-bg,1440x400,1440x480,True,main,,http://127.0.0.1:8766/img/bg-section.jpg
+P002,1,images,pages/about-aspx__546298/assets/images/001_hero2.jpg,History photo,img,1440x500,600x208,True,main,,http://127.0.0.1:8766/img/hero2.jpg
+P003,1,images,pages/brands-knife__5377aa/assets/images/001_knife-oil.jpg,Knife cooking oil 2kg,img,500x500,500x500,True,main,,http://127.0.0.1:8766/img/knife-oil.jpg
+P007,1,images,pages/brands-knife__q-sku-2__72d1d0/assets/images/001_knife-oil.jpg,Knife cooking oil 2kg,img,500x500,500x500,True,main,,http://127.0.0.1:8766/img/knife-oil.jpg
+P008,1,images,pages/old-about__367c32/assets/images/001_hero2.jpg,History photo,img,1440x500,600x208,True,main,,http://127.0.0.1:8766/img/hero2.jpg

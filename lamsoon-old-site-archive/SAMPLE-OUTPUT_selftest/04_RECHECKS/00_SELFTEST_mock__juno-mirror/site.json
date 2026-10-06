@@ -1,0 +1,385 @@
+{
+ "config": {
+  "label": "MOCK old site (self-test) - juno-mirror",
+  "short": "MOCK",
+  "folder": "00_SELFTEST_mock__juno-mirror",
+  "lang": "en",
+  "start": [
+   "http://127.0.0.1:8765/"
+  ],
+  "allow_hosts": [
+   "127.0.0.1:8765"
+  ],
+  "canonical_host": "127.0.0.1:8765",
+  "include_prefixes": [
+   "/"
+  ],
+  "exclude_prefixes": [],
+  "sitemaps": [
+   "/sitemap.xml"
+  ],
+  "wp_api": false,
+  "notes": "self-test",
+  "key": "mock",
+  "recheck_of": "00_SELFTEST_mock",
+  "recheck_origin": "http://127.0.0.1:8766"
+ },
+ "started": "2026-10-06T11:03:36+00:00",
+ "finished": "2026-10-06T11:03:44+00:00",
+ "platform_hints": [
+  "ASP.NET",
+  "Google Tag Manager",
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "counts": {
+  "pages": 9,
+  "ok": 7,
+  "errors": 2,
+  "assets": 7,
+  "assets_failed": 1,
+  "documents": 0,
+  "forms": 3,
+  "issues": 6,
+  "out_of_scope": 0,
+  "orphans": 2
+ },
+ "pages": [
+  {
+   "url": "http://127.0.0.1:8766/",
+   "key": "/",
+   "pair_key": "/",
+   "folder": "home__42099b",
+   "depth": 0,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:38+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Lam Soon Malaysia | Home",
+   "h1": [
+    "Nourishing Malaysian families"
+   ],
+   "lang": "en",
+   "words": 44,
+   "blocks": 14,
+   "hidden_blocks": 2,
+   "images": 6,
+   "svgs": 1,
+   "icon_fonts": 1,
+   "links": 10,
+   "forms": 0,
+   "media": 0,
+   "emails": [
+    "info@lamsoon.com.my"
+   ],
+   "page_h": 1473,
+   "orphan": false,
+   "id": "P001"
+  },
+  {
+   "url": "http://127.0.0.1:8766/about.aspx",
+   "key": "/about.aspx",
+   "pair_key": "/about.aspx",
+   "folder": "about-aspx__546298",
+   "depth": 1,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:38+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/about.aspx",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "About Us",
+   "h1": [
+    "About Lam Soon"
+   ],
+   "lang": "",
+   "words": 11,
+   "blocks": 5,
+   "hidden_blocks": 0,
+   "images": 1,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 1,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P002"
+  },
+  {
+   "url": "http://127.0.0.1:8766/brands/knife/",
+   "key": "/brands/knife/",
+   "pair_key": "/brands/knife/",
+   "folder": "brands-knife__5377aa",
+   "depth": 1,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:38+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/brands/knife/",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Knife Cooking Oil",
+   "h1": [
+    "Knife"
+   ],
+   "lang": "",
+   "words": 4,
+   "blocks": 5,
+   "hidden_blocks": 0,
+   "images": 1,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 2,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P003"
+  },
+  {
+   "url": "http://127.0.0.1:8766/contact.aspx",
+   "key": "/contact.aspx",
+   "pair_key": "/contact.aspx",
+   "folder": "contact-aspx__09e261",
+   "depth": 1,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:40+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/contact.aspx",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Contact Us",
+   "h1": [
+    "Contact Us"
+   ],
+   "lang": "",
+   "words": 6,
+   "blocks": 6,
+   "hidden_blocks": 2,
+   "images": 0,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 1,
+   "forms": 1,
+   "media": 0,
+   "emails": [
+    "consumer@lamsoon.com.my"
+   ],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P004"
+  },
+  {
+   "url": "http://127.0.0.1:8766/missing-page.aspx",
+   "key": "/missing-page.aspx",
+   "pair_key": "/missing-page.aspx",
+   "folder": "missing-page-aspx__046738",
+   "depth": 1,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:40+00:00",
+   "status": 404,
+   "final_url": "http://127.0.0.1:8766/missing-page.aspx",
+   "redirected": false,
+   "content_type": "text/html;charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Error response",
+   "h1": [
+    "Error response"
+   ],
+   "lang": "en",
+   "words": 19,
+   "blocks": 4,
+   "hidden_blocks": 0,
+   "images": 0,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 0,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P005"
+  },
+  {
+   "url": "http://127.0.0.1:8766/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "key": "/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "pair_key": "/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "folder": "th-u__29b980",
+   "depth": 1,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:40+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "สินค้า | ล่ำสูง",
+   "h1": [
+    "สินค้าของเรา"
+   ],
+   "lang": "th",
+   "words": 5,
+   "blocks": 3,
+   "hidden_blocks": 0,
+   "images": 0,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 1,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P006"
+  },
+  {
+   "url": "http://127.0.0.1:8766/brands/knife/?sku=2",
+   "key": "/brands/knife/?sku=2",
+   "pair_key": "/brands/knife/?sku=2",
+   "folder": "brands-knife__q-sku-2__72d1d0",
+   "depth": 2,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:41+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/brands/knife/?sku=2",
+   "redirected": false,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Knife Cooking Oil",
+   "h1": [
+    "Knife"
+   ],
+   "lang": "",
+   "words": 4,
+   "blocks": 5,
+   "hidden_blocks": 0,
+   "images": 1,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 2,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": false,
+   "id": "P007"
+  },
+  {
+   "url": "http://127.0.0.1:8766/old-about",
+   "key": "/old-about",
+   "pair_key": "/old-about",
+   "folder": "old-about__367c32",
+   "depth": 99,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:42+00:00",
+   "status": 200,
+   "final_url": "http://127.0.0.1:8766/about.aspx",
+   "redirected": true,
+   "content_type": "text/html; charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "About Us",
+   "h1": [
+    "About Lam Soon"
+   ],
+   "lang": "",
+   "words": 11,
+   "blocks": 5,
+   "hidden_blocks": 0,
+   "images": 1,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 1,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": true,
+   "id": "P008"
+  },
+  {
+   "url": "http://127.0.0.1:8766/orphan.aspx",
+   "key": "/orphan.aspx",
+   "pair_key": "/orphan.aspx",
+   "folder": "orphan-aspx__030ba1",
+   "depth": 99,
+   "found_via": [
+    "recheck-list"
+   ],
+   "parent": null,
+   "captured_at": "2026-10-06T11:03:42+00:00",
+   "status": 404,
+   "final_url": "http://127.0.0.1:8766/orphan.aspx",
+   "redirected": false,
+   "content_type": "text/html;charset=utf-8",
+   "server": "SimpleHTTP/0.6 Python/3.13.16",
+   "x_powered_by": "",
+   "x_frame_options": "",
+   "title": "Error response",
+   "h1": [
+    "Error response"
+   ],
+   "lang": "en",
+   "words": 19,
+   "blocks": 4,
+   "hidden_blocks": 0,
+   "images": 0,
+   "svgs": 0,
+   "icon_fonts": 0,
+   "links": 0,
+   "forms": 0,
+   "media": 0,
+   "emails": [],
+   "page_h": 900,
+   "orphan": true,
+   "id": "P009"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.1:8766/orphan.aspx
+Subject: Error response
+Date: Tue, 6 Oct 2026 11:03:44 +0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--84byVNRMFxRYzBrajN0D3l5KrGD7sb8syxHA5OlnhC----"
+
+
+------MultipartBoundary--84byVNRMFxRYzBrajN0D3l5KrGD7sb8syxHA5OlnhC----
+Content-Type: text/html
+Content-ID: <frame-D3108094F2AC5FF0AAC1DC5E7FFDBC85@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:8766/orphan.aspx
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+       =20
+        <title>Error response</title>
+    </head>
+    <body>
+        <h1>Error response</h1>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+   =20
+
+</body></html>
+------MultipartBoundary--84byVNRMFxRYzBrajN0D3l5KrGD7sb8syxHA5OlnhC------

@@ -1,0 +1,510 @@
+{
+ "meta": {
+  "title": "Lam Soon Malaysia | Home",
+  "lang": "en",
+  "url": "http://127.0.0.1:8765/",
+  "base": "http://127.0.0.1:8765/",
+  "metas": {
+   "description": "Lam Soon Malaysia home page",
+   "og:image": "/img/hero1.jpg"
+  },
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "Nourishing Malaysian families"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "nav",
+   "heading": null,
+   "region": "nav",
+   "visible": true,
+   "path": "html > body > header.site-header > nav",
+   "link": null,
+   "text": "HomeAbout UsKnifeContactสินค้า"
+  },
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "body > main > div.hero > div.slide > h1",
+   "link": null,
+   "text": "Nourishing Malaysian families"
+  },
+  {
+   "tag": "h2",
+   "heading": "h2",
+   "region": "main",
+   "visible": false,
+   "path": "body > main > div.hero > div.slide > h2",
+   "link": null,
+   "text": "Hidden slide headline"
+  },
+  {
+   "tag": "h2",
+   "heading": "h2",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > section > h2",
+   "link": null,
+   "text": "Our Brands"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > section > p",
+   "link": null,
+   "text": "Lam Soon is home to Knife, Naturel and more."
+  },
+  {
+   "tag": "li",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "body > main > section > ul.ticks > li",
+   "link": null,
+   "text": "Halal certified"
+  },
+  {
+   "tag": "li",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "body > main > section > ul.ticks > li",
+   "link": null,
+   "text": "Since 1950"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > section > p",
+   "link": null,
+   "text": "Trusted quality"
+  },
+  {
+   "tag": "div",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > section > div.tab.active",
+   "link": null,
+   "text": "Tab one text"
+  },
+  {
+   "tag": "div",
+   "heading": null,
+   "region": "main",
+   "visible": false,
+   "path": "html > body > main > section > div.tab",
+   "link": null,
+   "text": "Tab two hidden text"
+  },
+  {
+   "tag": "section",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > section",
+   "link": null,
+   "text": "Annual report (PDF) · Broken link · Facebook · Email us"
+  },
+  {
+   "tag": "h3",
+   "heading": "h3",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > div.section-bg > h3",
+   "link": null,
+   "text": "Community"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > div.section-bg > p",
+   "link": null,
+   "text": "Background section"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "footer",
+   "visible": true,
+   "path": "html > body > footer > p",
+   "link": "tel:+60351234567",
+   "text": "© Lam Soon (M) Berhad. Tel: +603 5123 4567"
+  }
+ ],
+ "images": [
+  {
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "kind": "img",
+   "alt": "Lam Soon logo",
+   "title": null,
+   "natural_w": 200,
+   "natural_h": 60,
+   "rendered_w": 200,
+   "rendered_h": 60,
+   "visible": true,
+   "region": "header",
+   "path": "html > body > header.site-header > img",
+   "link": null,
+   "local": "assets/logos/001_logo.png",
+   "category": "logos",
+   "bytes": 1016
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/lazy-product.jpg",
+   "kind": "img",
+   "alt": "",
+   "title": null,
+   "natural_w": 600,
+   "natural_h": 600,
+   "rendered_w": 600,
+   "rendered_h": 600,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > section > img.lazy",
+   "link": null,
+   "local": "assets/images/002_lazy-product.jpg",
+   "category": "images",
+   "bytes": 6622
+  },
+  {
+   "kind": "css-bg",
+   "url": "http://127.0.0.1:8765/img/hero1.jpg",
+   "rendered_w": 1440,
+   "rendered_h": 500,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > div.hero > div.slide",
+   "local": "assets/backgrounds/003_hero1.jpg",
+   "category": "backgrounds",
+   "bytes": 12466,
+   "natural_w": 1440,
+   "natural_h": 500
+  },
+  {
+   "kind": "css-bg",
+   "url": "http://127.0.0.1:8765/img/hero2.jpg",
+   "rendered_w": 0,
+   "rendered_h": 0,
+   "visible": false,
+   "region": "main",
+   "path": "html > body > main > div.hero > div.slide",
+   "local": "assets/backgrounds/004_hero2.jpg",
+   "category": "backgrounds",
+   "bytes": 12967,
+   "natural_w": 1440,
+   "natural_h": 500
+  },
+  {
+   "kind": "pseudo-bg::before",
+   "url": "http://127.0.0.1:8765/img/tick.png",
+   "rendered_w": 16,
+   "rendered_h": 16,
+   "visible": true,
+   "region": "main",
+   "path": "body > main > section > ul.ticks > li::before",
+   "local": "assets/icons/005_tick.png",
+   "category": "icons",
+   "bytes": 82,
+   "natural_w": 16,
+   "natural_h": 16
+  },
+  {
+   "kind": "pseudo-bg::before",
+   "url": "http://127.0.0.1:8765/img/tick.png",
+   "rendered_w": 16,
+   "rendered_h": 16,
+   "visible": true,
+   "region": "main",
+   "path": "body > main > section > ul.ticks > li::before",
+   "local": "assets/icons/005_tick.png"
+  },
+  {
+   "kind": "css-bg",
+   "url": "http://127.0.0.1:8765/img/bg-section.jpg",
+   "rendered_w": 1440,
+   "rendered_h": 480,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > div.section-bg",
+   "local": "assets/backgrounds/006_bg-section.jpg",
+   "category": "backgrounds",
+   "bytes": 9910,
+   "natural_w": 1440,
+   "natural_h": 400
+  },
+  {
+   "kind": "favicon",
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "region": "head",
+   "visible": false,
+   "local": "assets/logos/001_logo.png"
+  },
+  {
+   "kind": "meta:og:image",
+   "url": "http://127.0.0.1:8765/img/hero1.jpg",
+   "region": "head",
+   "visible": false,
+   "local": "assets/backgrounds/003_hero1.jpg"
+  }
+ ],
+ "svgs": [
+  {
+   "kind": "inline-svg",
+   "rendered_w": 24,
+   "rendered_h": 24,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > section > svg",
+   "label": null,
+   "local": "assets/svg-inline/001_svg_24x24.svg",
+   "category": "icons"
+  }
+ ],
+ "iconFonts": [
+  {
+   "classes": "fa fa-check",
+   "count": 1,
+   "region": "main",
+   "sample_text": "Trusted quality"
+  }
+ ],
+ "media": [],
+ "links": [
+  {
+   "href": "http://127.0.0.1:8765/",
+   "raw": "/",
+   "text": "Home",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "nav",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/about.aspx",
+   "raw": "/about.aspx",
+   "text": "About Us",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "nav",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/brands/knife/",
+   "raw": "/brands/knife/",
+   "text": "Knife",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "nav",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/contact.aspx",
+   "raw": "/contact.aspx",
+   "text": "Contact",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "nav",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "raw": "/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "text": "สินค้า",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "nav",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/docs/annual-report.pdf",
+   "raw": "/docs/annual-report.pdf",
+   "text": "Annual report (PDF)",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/missing-page.aspx",
+   "raw": "/missing-page.aspx",
+   "text": "Broken link",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "https://www.facebook.com/lamsoon",
+   "raw": "https://www.facebook.com/lamsoon",
+   "text": "Facebook",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "mailto:info@lamsoon.com.my",
+   "raw": "mailto:info@lamsoon.com.my",
+   "text": "Email us",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "tel:+60351234567",
+   "raw": "tel:+60351234567",
+   "text": "+603 5123 4567",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "footer",
+   "visible": true,
+   "onclick": null
+  }
+ ],
+ "onclickNav": [],
+ "forms": [],
+ "scripts": [
+  "https://www.googletagmanager.com/gtag/js?id=G-ABCDEF1234"
+ ],
+ "styles": [
+  "http://127.0.0.1:8765/css/style.css"
+ ],
+ "page_size": {
+  "w": 1440,
+  "h": 2059
+ },
+ "emails": [
+  "info@lamsoon.com.my"
+ ],
+ "tracking_ids": [
+  "G-ABCDEF1234"
+ ],
+ "platform_hints": [
+  "ASP.NET",
+  "Google Tag Manager",
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8765/",
+   "type": "document",
+   "status": 200,
+   "ctype": "text/html; charset=utf-8"
+  },
+  {
+   "url": "http://127.0.0.1:8765/css/style.css",
+   "type": "stylesheet",
+   "status": 200,
+   "ctype": "text/css"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/png"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/lazy-product.jpg",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/jpeg"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/hero1.jpg",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/jpeg"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/tick.png",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/png"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/bg-section.jpg",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/jpeg"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/logo.png",
+   "type": "other",
+   "status": 200,
+   "ctype": "image/png"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8765/",
+  "key": "/",
+  "pair_key": "/",
+  "folder": "home__42099b",
+  "depth": 0,
+  "found_via": [
+   "start",
+   "sitemap",
+   "link"
+  ],
+  "parent": null,
+  "captured_at": "2026-10-06T11:03:21+00:00",
+  "status": 200,
+  "final_url": "http://127.0.0.1:8765/",
+  "redirected": false,
+  "content_type": "text/html; charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "Lam Soon Malaysia | Home",
+  "h1": [
+   "Nourishing Malaysian families"
+  ],
+  "lang": "en",
+  "words": 44,
+  "blocks": 14,
+  "hidden_blocks": 2,
+  "images": 6,
+  "svgs": 1,
+  "icon_fonts": 1,
+  "links": 10,
+  "forms": 0,
+  "media": 0,
+  "emails": [
+   "info@lamsoon.com.my"
+  ],
+  "page_h": 2059,
+  "orphan": false,
+  "id": "P001"
+ }
+}

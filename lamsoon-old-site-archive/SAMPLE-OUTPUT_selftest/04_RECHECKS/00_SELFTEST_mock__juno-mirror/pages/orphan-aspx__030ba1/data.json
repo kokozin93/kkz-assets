@@ -1,0 +1,116 @@
+{
+ "meta": {
+  "title": "Error response",
+  "lang": "en",
+  "url": "http://127.0.0.1:8766/orphan.aspx",
+  "base": "http://127.0.0.1:8766/orphan.aspx",
+  "metas": {},
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "Error response"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > h1",
+   "link": null,
+   "text": "Error response"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > p",
+   "link": null,
+   "text": "Error code: 404"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > p",
+   "link": null,
+   "text": "Message: File not found."
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > p",
+   "link": null,
+   "text": "Error code explanation: 404 - Nothing matches the given URI."
+  }
+ ],
+ "images": [],
+ "svgs": [],
+ "iconFonts": [],
+ "media": [],
+ "links": [],
+ "onclickNav": [],
+ "forms": [],
+ "scripts": [],
+ "styles": [],
+ "page_size": {
+  "w": 1440,
+  "h": 900
+ },
+ "emails": [],
+ "tracking_ids": [],
+ "platform_hints": [
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8766/orphan.aspx",
+   "type": "document",
+   "status": 404,
+   "ctype": "text/html;charset=utf-8"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8766/orphan.aspx",
+  "key": "/orphan.aspx",
+  "pair_key": "/orphan.aspx",
+  "folder": "orphan-aspx__030ba1",
+  "depth": 99,
+  "found_via": [
+   "recheck-list"
+  ],
+  "parent": null,
+  "captured_at": "2026-10-06T11:03:42+00:00",
+  "status": 404,
+  "final_url": "http://127.0.0.1:8766/orphan.aspx",
+  "redirected": false,
+  "content_type": "text/html;charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "Error response",
+  "h1": [
+   "Error response"
+  ],
+  "lang": "en",
+  "words": 19,
+  "blocks": 4,
+  "hidden_blocks": 0,
+  "images": 0,
+  "svgs": 0,
+  "icon_fonts": 0,
+  "links": 0,
+  "forms": 0,
+  "media": 0,
+  "emails": [],
+  "page_h": 900,
+  "orphan": true,
+  "id": "P009"
+ }
+}

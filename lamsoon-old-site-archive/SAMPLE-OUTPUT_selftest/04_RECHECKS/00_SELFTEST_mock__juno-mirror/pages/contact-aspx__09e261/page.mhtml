@@ -1,0 +1,62 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.1:8766/contact.aspx
+Subject: Contact Us
+Date: Tue, 6 Oct 2026 11:03:41 +0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--FnDPxVmUuLxIZSWEQu92r5v49JmshzaXCwi3doNOAv----"
+
+
+------MultipartBoundary--FnDPxVmUuLxIZSWEQu92r5v49JmshzaXCwi3doNOAv----
+Content-Type: text/html
+Content-ID: <frame-647494370C94ABA9B0C252D56DA19180@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:8766/contact.aspx
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><title>Contact Us</title><link rel=3D"stylesheet" =
+href=3D"http://127.0.0.1:8766/css/style.css"></head><body>
+<header class=3D"site-header"><a href=3D"http://127.0.0.1:8766/">Home</a></=
+header><main><h1>Contact Us</h1>
+<form id=3D"contactForm" method=3D"post" action=3D"http://127.0.0.1:8766/ha=
+ndlers/contact.ashx">
+<label for=3D"n">Name</label><input id=3D"n" name=3D"name" required=3D""><l=
+abel for=3D"e">Email</label><input id=3D"e" type=3D"email" name=3D"email" r=
+equired=3D"">
+<select name=3D"topic"><option>Product enquiry</option><option>Careers</opt=
+ion></select><textarea name=3D"msg" placeholder=3D"Message"></textarea><but=
+ton type=3D"submit">Send</button></form></main>
+<footer>Footer</footer>
+</body></html>
+------MultipartBoundary--FnDPxVmUuLxIZSWEQu92r5v49JmshzaXCwi3doNOAv----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:8766/css/style.css
+
+@charset "utf-8";
+
+body { font-family: Arial, sans-serif; margin: 0px; }
+
+header.site-header { background: rgb(200, 16, 46); color: rgb(255, 255, 255=
+); padding: 12px 24px; display: flex; gap: 20px; align-items: center; }
+
+header a { color: rgb(255, 255, 255); }
+
+.hero .slide { height: 500px; background-size: cover; }
+
+.hero .slide:nth-child(2) { display: none; }
+
+.section-bg { background: url("../img/bg-section.jpg") center center / cove=
+r; height: 400px; color: rgb(255, 255, 255); padding: 40px; }
+
+ul.ticks li::before { content: ""; display: inline-block; width: 16px; heig=
+ht: 16px; background: url("../img/tick.png"); margin-right: 8px; }
+
+footer { background: rgb(34, 34, 34); color: rgb(204, 204, 204); padding: 2=
+4px; }
+
+.tab { display: none; }
+
+.tab.active { display: block; }
+------MultipartBoundary--FnDPxVmUuLxIZSWEQu92r5v49JmshzaXCwi3doNOAv------

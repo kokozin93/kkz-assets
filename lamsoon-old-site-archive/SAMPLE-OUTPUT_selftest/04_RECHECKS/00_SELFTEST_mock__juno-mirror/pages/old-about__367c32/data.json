@@ -1,0 +1,202 @@
+{
+ "meta": {
+  "title": "About Us",
+  "lang": "",
+  "url": "http://127.0.0.1:8766/about.aspx",
+  "base": "http://127.0.0.1:8766/about.aspx",
+  "metas": {},
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "About Lam Soon"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "a",
+   "heading": null,
+   "region": "header",
+   "visible": true,
+   "path": "html > body > header.site-header > a",
+   "link": "http://127.0.0.1:8766/",
+   "text": "Home"
+  },
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > h1",
+   "link": null,
+   "text": "About Lam Soon"
+  },
+  {
+   "tag": "h2",
+   "heading": "h2",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > h2",
+   "link": null,
+   "text": "History"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > p",
+   "link": null,
+   "text": "Founded in 1951 in Singapore. Extra line."
+  },
+  {
+   "tag": "footer",
+   "heading": null,
+   "region": "footer",
+   "visible": true,
+   "path": "html > body > footer",
+   "link": null,
+   "text": "Footer"
+  }
+ ],
+ "images": [
+  {
+   "url": "http://127.0.0.1:8766/img/hero2.jpg",
+   "kind": "img",
+   "alt": "History photo",
+   "title": null,
+   "natural_w": 1440,
+   "natural_h": 500,
+   "rendered_w": 600,
+   "rendered_h": 208,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > img",
+   "link": null,
+   "local": "assets/images/001_hero2.jpg",
+   "category": "images",
+   "bytes": 12967
+  }
+ ],
+ "svgs": [],
+ "iconFonts": [],
+ "media": [],
+ "links": [
+  {
+   "href": "http://127.0.0.1:8766/",
+   "raw": "/",
+   "text": "Home",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "header",
+   "visible": true,
+   "onclick": null
+  }
+ ],
+ "onclickNav": [],
+ "forms": [
+  {
+   "index": 0,
+   "id": "aspnetForm",
+   "name": null,
+   "cls": "",
+   "action": "http://127.0.0.1:8766/about.aspx",
+   "action_raw": "./about.aspx",
+   "method": "POST",
+   "enctype": null,
+   "region": "main",
+   "visible": true,
+   "field_count": 0,
+   "fields": [
+    {
+     "tag": "input",
+     "type": "hidden",
+     "name": "__VIEWSTATE",
+     "id": null,
+     "required": false,
+     "placeholder": null,
+     "label": null,
+     "value": "dDwtMTA4MTI0"
+    }
+   ]
+  }
+ ],
+ "scripts": [],
+ "styles": [
+  "http://127.0.0.1:8766/css/style.css"
+ ],
+ "page_size": {
+  "w": 1440,
+  "h": 900
+ },
+ "emails": [],
+ "tracking_ids": [],
+ "platform_hints": [
+  "ASP.NET",
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8766/old-about",
+   "type": "document",
+   "status": 301,
+   "ctype": ""
+  },
+  {
+   "url": "http://127.0.0.1:8766/about.aspx",
+   "type": "document",
+   "status": 200,
+   "ctype": "text/html; charset=utf-8"
+  },
+  {
+   "url": "http://127.0.0.1:8766/css/style.css",
+   "type": "stylesheet",
+   "status": 200,
+   "ctype": "text/css"
+  },
+  {
+   "url": "http://127.0.0.1:8766/img/hero2.jpg",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/jpeg"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8766/old-about",
+  "key": "/old-about",
+  "pair_key": "/old-about",
+  "folder": "old-about__367c32",
+  "depth": 99,
+  "found_via": [
+   "recheck-list"
+  ],
+  "parent": null,
+  "captured_at": "2026-10-06T11:03:42+00:00",
+  "status": 200,
+  "final_url": "http://127.0.0.1:8766/about.aspx",
+  "redirected": true,
+  "content_type": "text/html; charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "About Us",
+  "h1": [
+   "About Lam Soon"
+  ],
+  "lang": "",
+  "words": 11,
+  "blocks": 5,
+  "hidden_blocks": 0,
+  "images": 1,
+  "svgs": 0,
+  "icon_fonts": 0,
+  "links": 1,
+  "forms": 0,
+  "media": 0,
+  "emails": [],
+  "page_h": 900,
+  "orphan": true,
+  "id": "P008"
+ }
+}

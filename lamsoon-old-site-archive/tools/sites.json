@@ -1,0 +1,47 @@
+{
+  "my": {
+    "label": "Lam Soon Malaysia",
+    "short": "MY",
+    "folder": "01_MY_lamsoon-com-my",
+    "lang": "en",
+    "start": ["https://www.lamsoon.com.my/"],
+    "allow_hosts": ["www.lamsoon.com.my", "lamsoon.com.my"],
+    "canonical_host": "www.lamsoon.com.my",
+    "include_prefixes": ["/"],
+    "exclude_prefixes": ["/admin", "/login", "/logout", "/cms", "/umbraco", "/webresource.axd", "/scriptresource.axd"],
+    "sitemaps": ["/sitemap.xml", "/sitemap_index.xml", "/sitemap.aspx"],
+    "wp_api": false,
+    "notes": "Old MY site (previous agency, non-PHP stack, likely ASP.NET - unconfirmed). Comes down 31 Oct 2026."
+  },
+  "th-en": {
+    "label": "Lam Soon Thailand - English",
+    "short": "TH-EN",
+    "folder": "02_TH-EN_lamsoon-co-th",
+    "lang": "en",
+    "start": ["https://lamsoon.co.th/en/"],
+    "allow_hosts": ["lamsoon.co.th", "www.lamsoon.co.th"],
+    "canonical_host": "lamsoon.co.th",
+    "include_prefixes": ["/en/"],
+    "exclude_prefixes": ["/en/wp-json", "/en/feed", "/en/comments/feed", "/en/wp-admin", "/en/wp-login.php"],
+    "sitemaps": ["/wp-sitemap.xml", "/sitemap_index.xml", "/sitemap.xml"],
+    "wp_api": true,
+    "notes": "WordPress. English language tree under /en/."
+  },
+  "th-th": {
+    "label": "Lam Soon Thailand - Thai",
+    "short": "TH-TH",
+    "folder": "03_TH-TH_lamsoon-co-th",
+    "lang": "th",
+    "start": [
+      "https://lamsoon.co.th/th/",
+      "https://lamsoon.co.th/th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%9b%e0%b8%b52569-%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%8a%e0%b8%b8%e0%b8%a1%e0%b8%9c%e0%b8%b9%e0%b9%89%e0%b8%96/"
+    ],
+    "allow_hosts": ["lamsoon.co.th", "www.lamsoon.co.th"],
+    "canonical_host": "lamsoon.co.th",
+    "include_prefixes": ["/th/"],
+    "exclude_prefixes": ["/th/wp-json", "/th/feed", "/th/comments/feed", "/th/wp-admin", "/th/wp-login.php"],
+    "sitemaps": ["/wp-sitemap.xml", "/sitemap_index.xml", "/sitemap.xml"],
+    "wp_api": true,
+    "notes": "WordPress. Thai language tree under /th/."
+  }
+}

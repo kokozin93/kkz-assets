@@ -1,0 +1,180 @@
+{
+ "meta": {
+  "title": "Knife Cooking Oil",
+  "lang": "",
+  "url": "http://127.0.0.1:8765/brands/knife/?sku=2",
+  "base": "http://127.0.0.1:8765/brands/knife/?sku=2",
+  "metas": {},
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "Knife"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "a",
+   "heading": null,
+   "region": "header",
+   "visible": true,
+   "path": "html > body > header.site-header > a",
+   "link": "http://127.0.0.1:8765/",
+   "text": "Home"
+  },
+  {
+   "tag": "a",
+   "heading": null,
+   "region": "header",
+   "visible": true,
+   "path": "html > body > header.site-header > a",
+   "link": "http://127.0.0.1:8765/brands/knife/?sku=2",
+   "text": "SKU 2"
+  },
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > h1",
+   "link": null,
+   "text": "Knife"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > main > p",
+   "link": null,
+   "text": "Pure cooking oil."
+  },
+  {
+   "tag": "footer",
+   "heading": null,
+   "region": "footer",
+   "visible": true,
+   "path": "html > body > footer",
+   "link": null,
+   "text": "Footer"
+  }
+ ],
+ "images": [
+  {
+   "url": "http://127.0.0.1:8765/img/knife-oil.jpg",
+   "kind": "img",
+   "alt": "Knife cooking oil 2kg",
+   "title": null,
+   "natural_w": 500,
+   "natural_h": 500,
+   "rendered_w": 500,
+   "rendered_h": 500,
+   "visible": true,
+   "region": "main",
+   "path": "html > body > main > img",
+   "link": null,
+   "local": "assets/images/001_knife-oil.jpg",
+   "category": "images",
+   "bytes": 4933
+  }
+ ],
+ "svgs": [],
+ "iconFonts": [],
+ "media": [],
+ "links": [
+  {
+   "href": "http://127.0.0.1:8765/",
+   "raw": "/",
+   "text": "Home",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "header",
+   "visible": true,
+   "onclick": null
+  },
+  {
+   "href": "http://127.0.0.1:8765/brands/knife/?sku=2",
+   "raw": "/brands/knife/?sku=2",
+   "text": "SKU 2",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "header",
+   "visible": true,
+   "onclick": null
+  }
+ ],
+ "onclickNav": [],
+ "forms": [],
+ "scripts": [],
+ "styles": [
+  "http://127.0.0.1:8765/css/style.css"
+ ],
+ "page_size": {
+  "w": 1440,
+  "h": 900
+ },
+ "emails": [],
+ "tracking_ids": [],
+ "platform_hints": [
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8765/brands/knife/?sku=2",
+   "type": "document",
+   "status": 200,
+   "ctype": "text/html; charset=utf-8"
+  },
+  {
+   "url": "http://127.0.0.1:8765/css/style.css",
+   "type": "stylesheet",
+   "status": 200,
+   "ctype": "text/css"
+  },
+  {
+   "url": "http://127.0.0.1:8765/img/knife-oil.jpg",
+   "type": "image",
+   "status": 200,
+   "ctype": "image/jpeg"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8765/brands/knife/?sku=2",
+  "key": "/brands/knife/?sku=2",
+  "pair_key": "/brands/knife/?sku=2",
+  "folder": "brands-knife__q-sku-2__72d1d0",
+  "depth": 2,
+  "found_via": [
+   "link"
+  ],
+  "parent": "http://127.0.0.1:8765/brands/knife/",
+  "captured_at": "2026-10-06T11:03:32+00:00",
+  "status": 200,
+  "final_url": "http://127.0.0.1:8765/brands/knife/?sku=2",
+  "redirected": false,
+  "content_type": "text/html; charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "Knife Cooking Oil",
+  "h1": [
+   "Knife"
+  ],
+  "lang": "",
+  "words": 4,
+  "blocks": 5,
+  "hidden_blocks": 0,
+  "images": 1,
+  "svgs": 0,
+  "icon_fonts": 0,
+  "links": 2,
+  "forms": 0,
+  "media": 0,
+  "emails": [],
+  "page_h": 900,
+  "orphan": false,
+  "id": "P007"
+ }
+}

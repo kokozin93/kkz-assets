@@ -1,0 +1,119 @@
+{
+ "meta": {
+  "title": "สินค้า | ล่ำสูง",
+  "lang": "th",
+  "url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "base": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "metas": {},
+  "canonical": null,
+  "alternates": [],
+  "h1": [
+   "สินค้าของเรา"
+  ],
+  "jsonld": []
+ },
+ "content": [
+  {
+   "tag": "h1",
+   "heading": "h1",
+   "region": "main",
+   "visible": true,
+   "path": "html > body > h1",
+   "link": null,
+   "text": "สินค้าของเรา"
+  },
+  {
+   "tag": "p",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body > p",
+   "link": null,
+   "text": "น้ำมันพืชตราองุ่น"
+  },
+  {
+   "tag": "body",
+   "heading": null,
+   "region": "main",
+   "visible": true,
+   "path": "html > body",
+   "link": "http://127.0.0.1:8765/",
+   "text": "Home"
+  }
+ ],
+ "images": [],
+ "svgs": [],
+ "iconFonts": [],
+ "media": [],
+ "links": [
+  {
+   "href": "http://127.0.0.1:8765/",
+   "raw": "/",
+   "text": "Home",
+   "title": null,
+   "target": null,
+   "rel": null,
+   "region": "main",
+   "visible": true,
+   "onclick": null
+  }
+ ],
+ "onclickNav": [],
+ "forms": [],
+ "scripts": [],
+ "styles": [],
+ "page_size": {
+  "w": 1440,
+  "h": 900
+ },
+ "emails": [],
+ "tracking_ids": [],
+ "platform_hints": [
+  "Server: SimpleHTTP/0.6 Python/3.13.16"
+ ],
+ "network": [
+  {
+   "url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+   "type": "document",
+   "status": 200,
+   "ctype": "text/html; charset=utf-8"
+  }
+ ],
+ "summary": {
+  "url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "key": "/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "pair_key": "/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "folder": "th-u__29b980",
+  "depth": 1,
+  "found_via": [
+   "link"
+  ],
+  "parent": "http://127.0.0.1:8765/",
+  "captured_at": "2026-10-06T11:03:31+00:00",
+  "status": 200,
+  "final_url": "http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/",
+  "redirected": false,
+  "content_type": "text/html; charset=utf-8",
+  "server": "SimpleHTTP/0.6 Python/3.13.16",
+  "x_powered_by": "",
+  "x_frame_options": "",
+  "title": "สินค้า | ล่ำสูง",
+  "h1": [
+   "สินค้าของเรา"
+  ],
+  "lang": "th",
+  "words": 5,
+  "blocks": 3,
+  "hidden_blocks": 0,
+  "images": 0,
+  "svgs": 0,
+  "icon_fonts": 0,
+  "links": 1,
+  "forms": 0,
+  "media": 0,
+  "emails": [],
+  "page_h": 900,
+  "orphan": false,
+  "id": "P006"
+ }
+}

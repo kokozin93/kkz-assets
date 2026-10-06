@@ -1,0 +1,5 @@
+﻿page_id,url,issue,detail
+P005,http://127.0.0.1:8765/missing-page.aspx,HTTP 404,http://127.0.0.1:8765/
+P008,http://127.0.0.1:8765/old-about,redirect,http://127.0.0.1:8765/about.aspx
+P008,http://127.0.0.1:8765/old-about,"orphan (in sitemap/API, not linked from crawled pages)",sitemap
+P009,http://127.0.0.1:8765/orphan.aspx,"orphan (in sitemap/API, not linked from crawled pages)",sitemap

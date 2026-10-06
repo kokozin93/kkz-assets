@@ -1,0 +1,3 @@
+{"mock": {"label": "MOCK old site (self-test)", "short": "MOCK", "folder": "00_SELFTEST_mock", "lang": "en",
+  "start": ["http://127.0.0.1:8765/"], "allow_hosts": ["127.0.0.1:8765"], "canonical_host": "127.0.0.1:8765",
+  "include_prefixes": ["/"], "exclude_prefixes": [], "sitemaps": ["/sitemap.xml"], "wp_api": false, "notes": "self-test"}}

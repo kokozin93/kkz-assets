@@ -1,0 +1,5 @@
+﻿page_id,page_url,type,value,link_text,region
+P001,http://127.0.0.1:8765/,mailto,info@lamsoon.com.my,Email us,main
+P001,http://127.0.0.1:8765/,tel,+60351234567,+603 5123 4567,footer
+P001,http://127.0.0.1:8765/,email-in-source,info@lamsoon.com.my,,
+P004,http://127.0.0.1:8765/contact.aspx,email-in-source,consumer@lamsoon.com.my,,

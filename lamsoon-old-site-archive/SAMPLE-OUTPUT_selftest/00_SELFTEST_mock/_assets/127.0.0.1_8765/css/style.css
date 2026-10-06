@@ -1,0 +1,9 @@
+body{font-family:Arial,sans-serif;margin:0}
+header.site-header{background:#c8102e;color:#fff;padding:12px 24px;display:flex;gap:20px;align-items:center}
+header a{color:#fff}
+.hero .slide{height:500px;background-size:cover}
+.hero .slide:nth-child(2){display:none}
+.section-bg{background:url(../img/bg-section.jpg) center/cover;height:400px;color:#fff;padding:40px}
+ul.ticks li::before{content:"";display:inline-block;width:16px;height:16px;background:url("../img/tick.png");margin-right:8px}
+footer{background:#222;color:#ccc;padding:24px}
+.tab{display:none}.tab.active{display:block}

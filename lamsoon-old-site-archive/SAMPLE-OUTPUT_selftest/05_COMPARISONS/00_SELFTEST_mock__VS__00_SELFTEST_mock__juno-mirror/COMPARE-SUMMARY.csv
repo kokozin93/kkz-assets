@@ -1,0 +1,10 @@
+﻿id,verdict,title,url,text_ratio,img_a,img_b,img_missing,img_changed,link_a,link_b,link_missing,visual,status_a,status_b,missing_b
+P001,DIFFERENT,Lam Soon Malaysia | Home,http://127.0.0.1:8765/,100.0,6,5,1,0,10,10,0,60.45,200,200,False
+P002,DIFFERENT,About Us,http://127.0.0.1:8765/about.aspx,80.0,1,1,0,0,1,1,0,0.11,200,200,False
+P003,MATCH,Knife Cooking Oil,http://127.0.0.1:8765/brands/knife/,100.0,1,1,0,0,2,2,0,0.0,200,200,False
+P004,MATCH,Contact Us,http://127.0.0.1:8765/contact.aspx,100.0,0,0,0,0,1,1,0,0.0,200,200,False
+P005,MATCH,Error response,http://127.0.0.1:8765/missing-page.aspx,100.0,0,0,0,0,0,0,0,0.0,404,404,False
+P006,MATCH,สินค้า | ล่ำสูง,http://127.0.0.1:8765/th/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/,100.0,0,0,0,0,1,1,0,0.0,200,200,False
+P007,MATCH,Knife Cooking Oil,http://127.0.0.1:8765/brands/knife/?sku=2,100.0,1,1,0,0,2,2,0,0.0,200,200,False
+P008,DIFFERENT,About Us,http://127.0.0.1:8765/old-about,80.0,1,1,0,0,1,1,0,0.11,200,200,False
+P009,DIFFERENT,Orphan Campaign,http://127.0.0.1:8765/orphan.aspx,0.0,0,0,0,0,0,0,0,1.23,200,404,False
