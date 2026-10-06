@@ -429,10 +429,14 @@ class Crawler:
         folder = self.pages_dir / f"{ascii_slug(urlsplit(url).path, urlsplit(url).query)}__{h(key, 6)}"
         if self.args.resume and (folder / "data.json").exists():
             d = json.loads((folder / "data.json").read_text("utf-8"))
-            self.results[url] = d["summary"]
-            for l in d.get("links", []):
-                self.enqueue(l.get("href"), meta["depth"] + 1, "link", url)
-            return
+            st = d.get("summary", {}).get("status") or 0
+            # only skip good captures; failed pages, timeouts and 5xx (e.g. 508 host throttling) are retried
+            if "content" in d and 0 < st < 500:
+                self.results[url] = d["summary"]
+                for l in d.get("links", []):
+                    self.enqueue(l.get("href"), meta["depth"] + 1, "link", url)
+                return
+            log(f"  ↻ retrying previously failed page (status {st or 'error'}): {url}")
         folder.mkdir(parents=True, exist_ok=True)
         page = await ctx.new_page()
         net_tasks, net_log = [], []
