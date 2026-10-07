@@ -46,6 +46,9 @@ lamsoon-old-site-archive/
     ├── index.html                   master: all sites, progress, comparison reports
     ├── 01_MY_lamsoon-com-my/
     │   ├── index.html               site dashboard (filter, sort, verify, export CSV)
+│   │                              opens on "Content pages only": hides duplicates (redirect /
+│   │                              trailing-slash twins) and auto lists (author/tag/category/date,
+│   │                              page 2/3/…). Nothing is deleted — switch to "All captured".
     │   ├── site.json                run metadata + page list
     │   ├── registers/               CSVs (UTF-8 BOM — Excel/Sheets safe for Thai)
     │   │   ├── PAGE-INVENTORY.csv         → paste into LamSoon Webpage Checklist (MY tab)

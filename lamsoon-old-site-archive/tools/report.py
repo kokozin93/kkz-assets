@@ -71,6 +71,59 @@ def site_meta(info):
             "recheck_of": cfg.get("recheck_of"), "recheck_origin": cfg.get("recheck_origin")}
 
 
+LIST_SEGS = {"author": "author archive", "tag": "tag archive", "category": "category archive",
+             "product-category": "product category list", "product-tag": "product tag list", "feed": "RSS feed", "search": "search results"}
+
+
+def _url_key(url):
+    s = urlsplit(url or "")
+    return (s.netloc.lower() + unquote(s.path).rstrip("/") + ("?" + s.query if s.query else "")).lower()
+
+
+def _list_reason(url):
+    """Why a URL is an auto-generated list (CMS archive / pagination) rather than a content page, else None."""
+    s = urlsplit(url or "")
+    segs = [x for x in unquote(s.path).split("/") if x]
+    if segs and len(segs[0]) == 2 and segs[0].isalpha():  # language prefix (/en/, /th/)
+        segs = segs[1:]
+    if any(q.startswith("s=") for q in s.query.split("&")):
+        return "search results"
+    if segs and segs[0].lower() in LIST_SEGS:
+        return LIST_SEGS[segs[0].lower()]
+    if segs and all(x.isdigit() for x in segs) and len(segs[0]) == 4 and len(segs) <= 3:
+        return "date archive"
+    for i, x in enumerate(segs[:-1]):
+        if x.lower() == "page" and segs[i + 1].isdigit():
+            return "pagination (page %s)" % segs[i + 1]
+    return None
+
+
+def classify_pages(pages):
+    """Tag each page row with kind = content | duplicate | list (+ kind_reason, dup_of).
+    duplicate: same address as another captured page (redirect, or with/without trailing slash) — the other row is kept.
+    list: WordPress-style auto-generated listing (author/tag/category/date archives, page 2, 3, …)."""
+    groups = {}
+    for p in pages:
+        eff = p.get("final_url") if p.get("redirected") and p.get("final_url") else p.get("url")
+        groups.setdefault(_url_key(eff), []).append(p)
+    for rows in groups.values():
+        rows.sort(key=lambda r: (bool(r.get("redirected")), not (r.get("status") and r["status"] < 400),
+                                 not urlsplit(r.get("url") or "").path.endswith("/"), r.get("id") or ""))
+        primary = rows[0]
+        for r in rows[1:]:
+            r.update(kind="duplicate", dup_of=primary.get("id"),
+                     kind_reason=("redirects to " if r.get("redirected") else "same page as ") + str(primary.get("id")))
+    for p in pages:
+        if p.get("kind"):
+            continue
+        why = _list_reason(p.get("final_url") if p.get("redirected") and p.get("final_url") else p.get("url"))
+        if why:
+            p.update(kind="list", kind_reason=why)
+        else:
+            p["kind"] = "content"
+    return pages
+
+
 def build_site(out: Path):
     out = Path(out)
     info = json.loads((out / "site.json").read_text("utf-8"))
@@ -94,6 +147,7 @@ def build_site(out: Path):
         by_url[p["url"]] = row
         if p.get("final_url"):
             by_url.setdefault(p["final_url"], row)
+    classify_pages(pages)
     reg = out / "registers"
     payload = {
         "site": {**sm, "started": info["started"], "finished": info["finished"], "counts": info["counts"], "platform_hints": info.get("platform_hints", [])},
@@ -164,7 +218,8 @@ def build_master(root: Path):
     for sj in sorted(list(root.glob("*/site.json")) + list(root.glob("04_RECHECKS/*/site.json"))):
         info = json.loads(sj.read_text("utf-8"))
         sm = site_meta(info)
-        sites.append({**sm, "href": rel(sj.parent / "index.html", root), "counts": info["counts"], "finished": info["finished"],
+        kinds = Counter(r["kind"] for r in classify_pages([dict(p) for p in info["pages"]]))
+        sites.append({**sm, "href": rel(sj.parent / "index.html", root), "counts": {**info["counts"], "content": kinds["content"]}, "finished": info["finished"],
                       "platform_hints": info.get("platform_hints", [])})
     comps = []
     for cj in sorted(root.glob("05_COMPARISONS/*/compare.json")):

@@ -76,6 +76,8 @@
     const site = S.site; const pages = S.pages; const folder = site.folder;
     document.title = `${site.short} archive — ${site.label}`;
     const c = site.counts;
+    pages.forEach((p) => { p.kind = p.kind || 'content'; });
+    const kindN = { content: 0, duplicate: 0, list: 0 }; pages.forEach((p) => { kindN[p.kind]++; });
     const app = $('#app');
     app.innerHTML = `
     <header class="top"><div class="wrap">
@@ -89,7 +91,8 @@
        ${site.recheck_of ? ` · <b>re-check of ${esc(site.recheck_of)}</b> against ${esc(site.recheck_origin)}` : ''}</div>
       <div class="sub">Platform fingerprint: ${(site.platform_hints || []).map((p) => `<span class="chip">${esc(p)}</span>`).join(' ') || '<span class="muted">—</span>'}</div>
       <div class="tiles">
-        <div class="tile"><div class="n">${c.pages}</div><div class="l">Pages captured</div></div>
+        <div class="tile"><div class="n">${kindN.content}</div><div class="l">Content pages</div></div>
+        <div class="tile"><div class="n">${c.pages}</div><div class="l">Pages captured (incl. ${kindN.duplicate} duplicates, ${kindN.list} auto lists)</div></div>
         <div class="tile ${c.errors ? 'bad' : 'ok'}"><div class="n">${c.errors}</div><div class="l">Failed / 4xx-5xx</div></div>
         <div class="tile"><div class="n">${c.assets}</div><div class="l">Assets saved</div></div>
         <div class="tile ${c.assets_failed ? 'warn' : ''}"><div class="n">${c.assets_failed}</div><div class="l">Assets failed</div></div>
@@ -103,6 +106,9 @@
       <div class="tabs" id="tabs"></div>
       <section id="tab-pages">
         <div class="toolbar">
+          <select id="fKind" title="Duplicates = the same page under a second address (redirect / trailing slash). Auto lists = CMS-generated author, tag, category, date and page-2/3/… listings. Everything stays archived; this only changes what is listed.">
+            <option value="content">Content pages only (${kindN.content})</option><option value="">All captured (${pages.length})</option>
+            <option value="duplicate">Duplicates only (${kindN.duplicate})</option><option value="list">Auto-generated lists only (${kindN.list})</option></select>
           <input type="search" id="q" placeholder="Search title / URL / ID…">
           <select id="fRes"><option value="">All results</option><option value="none">Not checked</option>${RESULTS.slice(1).map(([k, l]) => `<option value="${k}">${l}</option>`).join('')}</select>
           <select id="fDepth"><option value="">All depths</option></select>
@@ -135,12 +141,15 @@
     const secs = [...new Set(pages.map((p) => p.section))].sort();
     $('#fSec').innerHTML += secs.map((s) => `<option>${esc(s)}</option>`).join('');
 
+    $('#fKind').value = LS.get('lsa_kind', 'content');
     let sortK = 'id', sortDir = 1;
     function draw() {
       const st = LS.get(vkey(folder), {});
+      const fk = $('#fKind').value; LS.set('lsa_kind', fk);
       const q = $('#q').value.toLowerCase(), fr = $('#fRes').value, fd = $('#fDepth').value, fs = $('#fSec').value, fe = $('#fErr').checked;
       let rows = pages.filter((p) => {
         const v = st[p.id] || {};
+        if (fk && p.kind !== fk) return false;
         if (q && !(p.id + ' ' + p.title + ' ' + dec(p.url)).toLowerCase().includes(q)) return false;
         if (fr === 'none' && v.result) return false; if (fr && fr !== 'none' && v.result !== fr) return false;
         if (fd !== '' && String(p.depth) !== fd) return false; if (fs && p.section !== fs) return false;
@@ -154,7 +163,8 @@
           <td><a href="${p.href}"><b>${p.id}</b></a></td>
           <td class="hide-sm">${p.thumb ? `<a href="${p.href}"><img class="thumb" loading="lazy" src="${p.thumb}" alt=""></a>` : '<span class="chip bad">no shot</span>'}</td>
           <td><div class="ttl"><a href="${p.href}">${esc(p.title || '(no title)')}</a></div><div class="url">${esc(dec(p.url))}</div>
-            ${p.redirected ? `<span class="chip warn">redirect → ${esc(dec(p.final_url))}</span>` : ''} ${p.orphan ? '<span class="chip warn">orphan</span>' : ''} ${p.error ? `<span class="chip bad">${esc(p.error.slice(0, 80))}</span>` : ''}</td>
+            ${p.redirected ? `<span class="chip warn">redirect → ${esc(dec(p.final_url))}</span>` : ''} ${p.orphan ? '<span class="chip warn">orphan</span>' : ''}
+            ${p.kind === 'duplicate' ? `<span class="chip">duplicate · ${esc(p.kind_reason || '')}</span>` : p.kind === 'list' ? `<span class="chip">auto list · ${esc(p.kind_reason || '')}</span>` : ''} ${p.error ? `<span class="chip bad">${esc(p.error.slice(0, 80))}</span>` : ''}</td>
           <td class="hide-sm">${esc(p.section)}</td><td class="num">${p.depth === 99 ? '—' : p.depth}</td><td>${statusChip(p.status)}</td>
           <td class="num hide-sm">${p.words ?? ''}</td><td class="num hide-sm">${p.images ?? ''}</td><td class="num hide-sm">${p.forms || ''}</td>
           <td>${checksHTML(p.id, v, true)}</td><td>${resultSelect(p.id, v.result)}</td>
@@ -164,17 +174,19 @@
       progress();
     }
     function progress() {
-      const st = LS.get(vkey(folder), {}); const done = pages.filter((p) => (st[p.id] || {}).result).length;
-      const pct = pages.length ? Math.round((done / pages.length) * 100) : 0;
-      $('#vt .n').textContent = pct + '%'; $('#vt .l').textContent = `Verified vs live (${done}/${pages.length})`; $('#vt i').style.width = pct + '%';
+      const st = LS.get(vkey(folder), {}); const fk = $('#fKind').value;
+      const pool = fk === 'content' ? pages.filter((p) => p.kind === 'content') : pages;
+      const done = pool.filter((p) => (st[p.id] || {}).result).length;
+      const pct = pool.length ? Math.round((done / pool.length) * 100) : 0;
+      $('#vt .n').textContent = pct + '%'; $('#vt .l').textContent = `Verified vs live (${done}/${pool.length}${fk === 'content' ? ' content' : ''})`; $('#vt i').style.width = pct + '%';
     }
-    ['q', 'fRes', 'fDepth', 'fSec', 'fErr'].forEach((id) => $('#' + id).addEventListener('input', draw));
+    ['fKind', 'q', 'fRes', 'fDepth', 'fSec', 'fErr'].forEach((id) => $('#' + id).addEventListener('input', draw));
     $$('#tbl th[data-s]').forEach((th) => th.onclick = () => { const k = th.dataset.s; sortDir = sortK === k ? -sortDir : 1; sortK = k; draw(); });
     bindVerify($('#tbl'), folder, (pid, st) => { const tr = $(`#tbl [data-pid="${pid}"]`).closest('tr'); tr.className = st.result ? 'res-' + st.result : ''; progress(); });
     $('#exp').onclick = () => {
       const st = LS.get(vkey(folder), {});
-      const head = ['site', 'page_id', 'title', 'live_url', 'http', ...CHECKS.map(([, l]) => l + '_ok'), 'result', 'notes', 'checked_by', 'checked_at'];
-      const lines = [head.join(',')].concat(pages.map((p) => { const v = st[p.id] || {}; return [site.short, p.id, p.title, dec(p.url), p.status, ...CHECKS.map(([k]) => (v[k] ? 'Y' : '')), v.result || '', v.notes || '', v.by || '', v.at || ''].map(csvCell).join(','); }));
+      const head = ['site', 'page_id', 'title', 'live_url', 'http', 'page_type', ...CHECKS.map(([, l]) => l + '_ok'), 'result', 'notes', 'checked_by', 'checked_at'];
+      const lines = [head.join(',')].concat(pages.map((p) => { const v = st[p.id] || {}; return [site.short, p.id, p.title, dec(p.url), p.status, p.kind + (p.kind_reason ? ` (${p.kind_reason})` : ''), ...CHECKS.map(([k]) => (v[k] ? 'Y' : '')), v.result || '', v.notes || '', v.by || '', v.at || ''].map(csvCell).join(','); }));
       download(`${site.short}_verification_${new Date().toISOString().slice(0, 10)}.csv`, lines.join('\n'));
     };
     $('#imp').onclick = () => $('#impf').click();
@@ -404,7 +416,7 @@
         return `<div class="card" style="margin-bottom:12px"><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
           <h2 style="margin:0"><a href="${x.href}">${esc(x.label)}</a></h2><span class="chip">${esc(x.short)}</span>${x.recheck_of ? `<span class="chip warn">re-check of ${esc(x.recheck_of)}</span>` : ''}<div class="spacer"></div><a class="btn primary" href="${x.href}">Open dashboard →</a></div>
           <div class="sub">${esc(x.origin)} · captured ${esc(x.finished)} · ${(x.platform_hints || []).map((p) => `<span class="chip">${esc(p)}</span>`).join(' ')}</div>
-          <div class="tiles"><div class="tile"><div class="n">${x.counts.pages}</div><div class="l">Pages</div></div><div class="tile ${x.counts.errors ? 'bad' : 'ok'}"><div class="n">${x.counts.errors}</div><div class="l">Failed</div></div>
+          <div class="tiles">${x.counts.content != null ? `<div class="tile"><div class="n">${x.counts.content}</div><div class="l">Content pages</div></div>` : ''}<div class="tile"><div class="n">${x.counts.pages}</div><div class="l">Pages captured</div></div><div class="tile ${x.counts.errors ? 'bad' : 'ok'}"><div class="n">${x.counts.errors}</div><div class="l">Failed</div></div>
           <div class="tile"><div class="n">${x.counts.assets}</div><div class="l">Assets</div></div><div class="tile"><div class="n">${x.counts.documents}</div><div class="l">Documents</div></div>
           <div class="tile"><div class="n">${x.counts.forms}</div><div class="l">Forms</div></div><div class="tile ${x.counts.issues ? 'warn' : ''}"><div class="n">${x.counts.issues}</div><div class="l">Issues logged</div></div>
           <div class="tile"><div class="n">${pct}%</div><div class="l">Verified (this browser)</div><div class="progress"><i style="width:${pct}%"></i></div></div></div></div>`;
