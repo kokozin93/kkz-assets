@@ -529,9 +529,21 @@ class Crawler:
             const step = Math.max(300, window.innerHeight * 0.8);
             let y = 0, guard = 0;
             while (y < document.documentElement.scrollHeight && guard++ < 200) {
-                window.scrollTo(0, y); y += step; await new Promise(r => setTimeout(r, 120));
+                window.scrollTo(0, y); y += step; await new Promise(r => setTimeout(r, 250));
             }
             window.scrollTo(0, 0);
+        }""")
+        # scroll-triggered entrance animations (Elementor, AOS, WOW, animate.css) can miss the trigger on a fast
+        # scroll and leave whole sections blank; force their end state so screenshots + offline copies show them
+        await page.evaluate("""() => {
+            if (!document.getElementById('lsa-reveal')) {
+                const st = document.createElement('style'); st.id = 'lsa-reveal';
+                st.textContent = `.elementor-invisible,[data-lsa-reveal],.wow,[data-aos],.animate__animated{visibility:visible!important;opacity:1!important}
+                  [data-aos]{transform:none!important}`;
+                document.head.appendChild(st);
+            }
+            document.querySelectorAll('.elementor-invisible').forEach(e => { e.setAttribute('data-lsa-reveal', '1'); e.classList.remove('elementor-invisible'); });
+            document.querySelectorAll('[data-aos]').forEach(e => e.classList.add('aos-animate'));
         }""")
         try:
             await page.wait_for_load_state("networkidle", timeout=8000)
